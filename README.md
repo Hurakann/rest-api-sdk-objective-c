@@ -1,4 +1,4 @@
-rest-api-sdk-ios
+rest-api-sdk-objective-c
 =================
 
 Hover API Rest SDK for iOS bindings 
