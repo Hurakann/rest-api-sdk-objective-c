@@ -3,8 +3,8 @@ rest-api-sdk-objective-c
 
 Hover API Rest SDK for iOS bindings 
 
-Welcome to the Hover SDK for iOS, this SDK is for building a robust iOS application based on the Hover API.
-The Hover SDK for iOS makes it easy to integrate a full Hover API services into iOS apps.
+Welcome to the Hover SDK for Objective-C, this SDK is for building a robust Objective-C application based on the Hover API.
+The Hover SDK for Objective-C makes it easy to integrate a full Hover API services into Objective-C apps.
 
 Static Library
 ============
