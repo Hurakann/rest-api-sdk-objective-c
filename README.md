@@ -1,7 +1,7 @@
 rest-api-sdk-objective-c
 =================
 
-Hover API Rest SDK for iOS bindings 
+Hover API Rest SDK for Objective-C bindings 
 
 Welcome to the Hover SDK for Objective-C, this SDK is for building a robust Objective-C application based on the Hover API.
 The Hover SDK for Objective-C makes it easy to integrate a full Hover API services into Objective-C apps.
@@ -60,7 +60,7 @@ Localize headers and **.a** file, it can be two methods:
 	        * headers files (.h)
 	    * libSDK_API_REST.a
 
-Instalation
+Installation
 ===========
 
 1. Add library to your project.
@@ -79,7 +79,7 @@ Instalation
 	* **proxyURL**: server IP.
 	* **port**: port to IP.
 	* **timeOut**: range time to make petition.
-	* **readTimeOut**: when connection is sucessful, range time to read response.
+	* **fileTimeOut**: when connection is sucessful, range time to read response.
  	
 
 And finally you'll have installed SDK for hover API !
