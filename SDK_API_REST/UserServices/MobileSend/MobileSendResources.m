@@ -10,7 +10,7 @@
 
 @implementation MobileSendResources
 
-+(void)sendNativeNotification:(void (^)(Response *))block WithParameters:(MobileSendParameters *)parameters{
++(void)sendNativeNotification:(void (^)(Response *))block WithParameters:(MobileSend *)parameters{
 
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[parameters toDictionary] options:kNilOptions error:&error];

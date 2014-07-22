@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HoverBoxParameters.h"
+#import "HoverBox.h"
 #import "Response.h"
 #import "ClientPOST.h"
 #import "ClientGET.h"
@@ -21,7 +21,7 @@
  * \return a response instance with the http status code
  *   is returned on given completion handler.
  */
-+ (void) activateHoverBox:(void (^)(Response *))block WithParameters:(HoverBoxParameters *) parameters;
++ (void) activateHoverBox:(void (^)(Response *))block WithParameters:(HoverBox *) parameters;
 
 
 /*!To get list of hoverboxes is required the blue user branch_id

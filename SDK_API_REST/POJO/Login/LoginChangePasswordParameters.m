@@ -10,9 +10,6 @@
 
 @implementation LoginChangePasswordParameters
 
-+(JSONKeyMapper*)keyMapper
-{
-    return [JSONKeyMapper mapperFromUnderscoreCaseToCamelCase];
-}
+
 
 @end

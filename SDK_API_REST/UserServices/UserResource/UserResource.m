@@ -60,11 +60,6 @@
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self completeParametersNameToRequest:userParameters] options:kNilOptions error:&error];
     
-    //NSString *requestBodyString=[userParameters toJSONString];
-    
-    //NSLog(@"JSON String: %@",requestBodyString);
-    
-    //NSData *requestBodyJSON = [requestBodyString dataUsingEncoding:NSUTF8StringEncoding];
     NSString *uri=@"/v1/user";
     
     [ClientPOST postRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
@@ -86,7 +81,7 @@
     
 }
 
-+(void)getUser:(void (^)(Response *))block withUserGetParameters:(UserGetInformationParameters *)parameters{
++(void)getUser:(void (^)(Response *))block withUserGetParameters:(UserGetParameters *)parameters{
 
     NSString *uri=@"/v1/user";
 
@@ -109,7 +104,7 @@
     } parametersURL:[parameters toDictionary] andURI:uri];
 }
 
-+(void)updateUserInformation:(void (^)(Response *))block withParameters:(UserRefreshInformation *)parameters{
++(void)updateUserInformation:(void (^)(Response *))block withParameters:(UserUpdateParameters *)parameters{
     
     NSString *uri=@"/v1/user";
     NSString *requestBodyString=[parameters toJSONString];

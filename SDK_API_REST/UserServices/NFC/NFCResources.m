@@ -10,7 +10,7 @@
 
 @implementation NFCResources
 
-+(void)assignNFCtoUser:(void (^)(Response *))block withParameters:(NFCParameters *)parameters{
++(void)assignNFCtoUser:(void (^)(Response *))block withParameters:(NFC *)parameters{
 
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[parameters toDictionary] options:kNilOptions error:&error];
@@ -29,7 +29,7 @@
 
 }
 
-+(void)updateNFCtoUser:(void (^)(Response *))block withParameters:(NFCParameters *)parameters{
++(void)updateNFCtoUser:(void (^)(Response *))block withParameters:(NFC *)parameters{
 
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[parameters toDictionary] options:kNilOptions error:&error];

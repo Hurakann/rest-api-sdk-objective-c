@@ -1,7 +1,7 @@
 dependencies: \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/UserServices/HoverBox/HoverBoxResources.m \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/UserServices/HoverBox/HoverBoxResources.h \
-  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/HoverBox/HoverBoxParameters.h \
+  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/HoverBox/HoverBox.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/LibraryExtern/JSONModel/JSONModel/JSONModel.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/LibraryExtern/JSONModel/JSONModel/JSONModelError.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/LibraryExtern/JSONModel/JSONModelTransformations/JSONValueTransformer.h \

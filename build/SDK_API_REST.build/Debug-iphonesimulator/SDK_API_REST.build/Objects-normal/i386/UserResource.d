@@ -12,12 +12,13 @@ dependencies: \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/Parent/Parent.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/Profile/Profile.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/General/General.h \
-  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/File/FileParameters.h \
-  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/User/UserServiceParameters.h \
-  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/NFC/NFCParameters.h \
+  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/File/File.h \
+  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/User/UserService.h \
+  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/NFC/NFC.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/HTTP/ClientPOST.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/COMMON/SharedData.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/HTTP/ClientGET.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/HTTP/ClientPUT.h \
-  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/User/UserGetInformationParameters.h \
-  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/User/UserRefreshInformation.h
+  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/User/UserGetParameters.h \
+  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/Phase/PhaseEditedParameters.h \
+  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/User/UserUpdateParameters.h

@@ -10,7 +10,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Response.h"
-#import "UserServiceParameters.h"
+#import "UserService.h"
 #import "ClientGET.h"
 #import "ClientPUT.h"
 #import "ClientPOST.h"
@@ -32,7 +32,7 @@
  * \return a Response instance with the http status code and the body decoded as json and in a class translation,
  *          is returned on given completion handler.
 */
-+ (void) assignUserByService:(void (^)(Response *))block withParameters:(UserServiceParameters *) userServiceParameters;
++ (void) assignUserByService:(void (^)(Response *))block withParameters:(UserService *) userServiceParameters;
 
 
 /*!Update information service assigned to the user, you must send only parameters to change.
@@ -45,7 +45,7 @@
  * \return a Response instance with the http status code, is returned on given completion handler.
  *
  */
-+ (void) updateUserService:(void (^)(Response *))block withParameters:(UserServiceParameters *) userServiceParameters;
++ (void) updateUserService:(void (^)(Response *))block withParameters:(UserService *) userServiceParameters;
 
 
 /*!Get service(s) assigned to the user,  check if user has assigned a specific service or if user is owner of the service
@@ -56,5 +56,5 @@
  * \return a Response instance with the http status code, is returned on given completion handler.
  *
  */
-+ (void) getUserService:(void (^)(Response *))block withParameters:(UserServiceParameters *) userServiceParameters;
++ (void) getUserService:(void (^)(Response *))block withParameters:(UserService *) userServiceParameters;
 @end

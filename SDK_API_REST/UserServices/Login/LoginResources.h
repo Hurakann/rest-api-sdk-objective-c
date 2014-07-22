@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LoginParameters.h"
+#import "Login.h"
 #import "LoginChangePasswordParameters.h"
 #import "LoginResetParameters.h"
 #import "Response.h"
@@ -25,7 +25,7 @@
  * \return a response instance with the http status code and the body decoded as json and in a class translation,
  *         is returned on given completion handler.
  */
-+ (void)getLogin:(void (^)(Response *))block withParameters:(LoginParameters *)parameters;
++ (void)getLogin:(void (^)(Response *))block withParameters:(Login *)parameters;
 
 
 /*!Sends an email with a recuperation code, the code is valid only for the next 48 hours

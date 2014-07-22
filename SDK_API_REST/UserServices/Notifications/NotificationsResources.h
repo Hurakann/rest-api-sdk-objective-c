@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Response.h"
-#import "NotificationsParameters.h"
+#import "Notification.h"
 #import "ClientPOST.h"
 #import "ClientPUT.h"
 #import "ClientGET.h"
@@ -22,7 +22,7 @@
  * \return a response instance with the http status code and the body decoded as NSDictionary
  *   is returned on given completion handler.
  */
-+ (void) createNewNotification:(void (^)(Response *))block WithParameters:(NotificationsParameters *) params;
++ (void) createNewNotification:(void (^)(Response *))block WithParameters:(Notification *) params;
 
 
 /*!The update in the notification is to change the status from true to false and vice versa. The required data are:

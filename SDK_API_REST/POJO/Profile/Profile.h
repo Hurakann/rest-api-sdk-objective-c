@@ -15,12 +15,16 @@
  */
 @interface Profile : JSONModel
 
-/** id for profile */
-@property (nonatomic, strong) NSString <Optional> *profile_id;
-/** id for profile */
-@property (nonatomic, strong) NSString <Optional> *id;
+/** User id for current user */
+@property (nonatomic, strong) NSString <Optional> *user_id;
 /** Name for profile */
 @property (nonatomic, strong) NSString <Optional> *name;
+
+/** id for profile */
+@property (nonatomic, strong) NSString <Optional> *profile_id;
+
+/** id for profile */
+@property (nonatomic, strong) NSString <Optional> *id;
 /** id for profile tree */
 @property (nonatomic, strong) NSString <Optional> *tree_id;
 /** Based on information */

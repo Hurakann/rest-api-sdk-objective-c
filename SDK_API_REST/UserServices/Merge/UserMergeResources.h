@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Response.h"
-#import "MergeParameters.h"
+#import "Merge.h"
 #import "ClientPOST.h"
 #import "ClientPUT.h"
 #import "ClientGET.h"
@@ -23,7 +23,7 @@
  * \return a response instance with the http status code,
  *   is returned on given completion handler.
  */
-+ (void) mergeUsers:(void (^)(Response *))block withParameters:(MergeParameters *) userParameters;
++ (void) mergeUsers:(void (^)(Response *))block withParameters:(Merge *) userParameters;
 
 /*!You can use this resource to change the main user in a group of merged users, for delete or append a user in the same group.
  *  The optional data is:
@@ -33,7 +33,7 @@
  *
  * \return a response instance with the http status code, is returned on given completion handler.
  */
-+ (void) changeMainUser:(void (^)(Response *))block OfMergedUsers:(MergeParameters *) userParameters;
++ (void) changeMainUser:(void (^)(Response *))block OfMergedUsers:(Merge *) userParameters;
 
 
 /*!To obtain the merge users information is necessary user_id parameter.

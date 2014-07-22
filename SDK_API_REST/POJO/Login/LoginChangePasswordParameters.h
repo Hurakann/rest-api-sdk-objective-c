@@ -15,10 +15,10 @@
 @interface LoginChangePasswordParameters : JSONModel
 
 /** Id for this user */
-@property (nonatomic, strong) NSString *userId;
+@property (nonatomic, strong) NSString *userI_id;
 /** old password to your account */
-@property (nonatomic, strong) NSString *oldPassword;
+@property (nonatomic, strong) NSString *old_password;
 /** new password to user account */
-@property (nonatomic, strong) NSString *nPassword;
+@property (nonatomic, strong, getter = nPassword) NSString *new_password;
 
 @end

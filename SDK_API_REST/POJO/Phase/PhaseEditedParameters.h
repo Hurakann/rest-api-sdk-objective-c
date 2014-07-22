@@ -12,7 +12,7 @@
 @interface PhaseEditedParameters : JSONModel
 
 /** Branch id of user was edit*/
-@property (nonatomic, strong) NSString <Optional> *branchId;
+@property (nonatomic, strong) NSString <Optional> *branch_id;
 /** Name of user was edit*/
 @property (nonatomic, strong) NSString <Optional> *name;
 

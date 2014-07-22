@@ -6,7 +6,7 @@ dependencies: \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/COMMON/SharedData.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/HTTP/ClientPOST.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/HTTP/ClientPUT.h \
-  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/Groups/GroupParameters.h \
+  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/Groups/Group.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/LibraryExtern/JSONModel/JSONModel/JSONModel.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/LibraryExtern/JSONModel/JSONModel/JSONModelError.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/LibraryExtern/JSONModel/JSONModelTransformations/JSONValueTransformer.h \

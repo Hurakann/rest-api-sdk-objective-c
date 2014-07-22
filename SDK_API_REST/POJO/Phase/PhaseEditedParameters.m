@@ -10,9 +10,5 @@
 
 @implementation PhaseEditedParameters
 
-+(JSONKeyMapper*)keyMapper
-{
-    return [JSONKeyMapper mapperFromUnderscoreCaseToCamelCase];
-}
 
 @end

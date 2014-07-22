@@ -25,7 +25,6 @@
 /** Branches for the user */
 @property (nonatomic, strong) NSArray  <Branches, ConvertOnDemand, Optional>* branches;
 
-
 @end
 
 

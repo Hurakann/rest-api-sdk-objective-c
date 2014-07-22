@@ -30,7 +30,7 @@
 
 }
 
-+(void)updateGroup:(void (^)(Response *))block WithParameters:(GroupParameters *)parameters{
++(void)updateGroup:(void (^)(Response *))block WithParameters:(Group *)parameters{
 
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[parameters toDictionary] options:kNilOptions error:&error];

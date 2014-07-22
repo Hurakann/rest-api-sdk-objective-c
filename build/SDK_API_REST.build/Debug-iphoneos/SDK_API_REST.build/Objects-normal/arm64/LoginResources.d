@@ -1,7 +1,7 @@
 dependencies: \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/UserServices/Login/LoginResources.m \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/UserServices/Login/LoginResources.h \
-  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/Login/LoginParameters.h \
+  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/Login/Login.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/LibraryExtern/JSONModel/JSONModel/JSONModel.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/LibraryExtern/JSONModel/JSONModel/JSONModelError.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/LibraryExtern/JSONModel/JSONModelTransformations/JSONValueTransformer.h \

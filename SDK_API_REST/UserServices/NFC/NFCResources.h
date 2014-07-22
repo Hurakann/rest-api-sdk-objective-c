@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NFCParameters.h"
+#import "NFC.h"
 #import "ClientPOST.h"
 #import "ClientPUT.h"
 #import "ClientGET.h"
@@ -23,7 +23,7 @@
  * \return a response instance with the http status code,
  *   is returned on given completion handler.
  */
-+ (void) assignNFCtoUser:(void (^)(Response *))block withParameters:(NFCParameters *) parameters;
++ (void) assignNFCtoUser:(void (^)(Response *))block withParameters:(NFC *) parameters;
 
 
 /*!Update information and services on assigned nfc card to the user. You must send only parameters to change
@@ -34,7 +34,7 @@
  * \return a response instance with the http status code,
  *   is returned on given completion handler.
  */
-+ (void) updateNFCtoUser:(void (^)(Response *))block withParameters:(NFCParameters *) parameters;
++ (void) updateNFCtoUser:(void (^)(Response *))block withParameters:(NFC *) parameters;
 
 
 /*!Get information about nfc card assigned to the user. The next parameters are required.

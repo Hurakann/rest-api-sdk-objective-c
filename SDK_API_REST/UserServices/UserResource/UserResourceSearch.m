@@ -12,7 +12,7 @@
 
 @implementation UserResourceSearch
 
-+(void)searchUser:(void (^)(Response *))block WithParameters:(UserSearchParameters *)searchParameters{
++(void)searchUser:(void (^)(Response *))block WithParameters:(UserSearch *)searchParameters{
 
     NSString *uri=@"/v1/user/search";
     NSMutableDictionary *paramsSend=[[NSMutableDictionary alloc] init];

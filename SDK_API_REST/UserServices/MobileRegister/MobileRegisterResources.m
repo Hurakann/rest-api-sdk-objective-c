@@ -10,7 +10,7 @@
 
 @implementation MobileRegisterResources
 
-+(void)addMobileDeviceToUser:(void (^)(Response *))block WithParameters:(MobileRegisterParameters *)parameters{
++(void)addMobileDeviceToUser:(void (^)(Response *))block WithParameters:(MobileRegister *)parameters{
 
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[parameters toDictionary] options:kNilOptions error:&error];

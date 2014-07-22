@@ -10,7 +10,7 @@
 
 @implementation UserMergeResources
 
-+ (void) mergeUsers:(void (^)(Response *))block withParameters:(MergeParameters *) userParameters{
++ (void) mergeUsers:(void (^)(Response *))block withParameters:(Merge *) userParameters{
 
     NSString *uri=@"/v1/user/merge";
     NSString *requestBodyString=[userParameters toJSONString];
@@ -29,7 +29,7 @@
     
 }
 
-+ (void) changeMainUser:(void (^)(Response *))block OfMergedUsers:(MergeParameters *) userParameters{
++ (void) changeMainUser:(void (^)(Response *))block OfMergedUsers:(Merge *) userParameters{
 
     NSString *uri=@"/v1/user/merge";
     NSString *requestBodyString=[userParameters toJSONString];

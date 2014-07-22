@@ -13,7 +13,7 @@
 
 @implementation UserResourceServices
 
-+(void)assignUserByService:(void (^)(Response *))block withParameters:(UserServiceParameters *)userServiceParameters{
++(void)assignUserByService:(void (^)(Response *))block withParameters:(UserService *)userServiceParameters{
     
     NSMutableDictionary *mutDict=[NSMutableDictionary alloc];
     
@@ -53,7 +53,7 @@
     
 }
 
-+(void)updateUserService:(void (^)(Response *))block withParameters:(UserServiceParameters *)userServiceParameters{
++(void)updateUserService:(void (^)(Response *))block withParameters:(UserService *)userServiceParameters{
 
     NSString *uri=@"/v1/user/services";
     NSString *requestBodyString=[userServiceParameters toJSONString];
@@ -72,7 +72,7 @@
     
 }
 
-+(void)getUserService:(void (^)(Response *))block withParameters:(UserServiceParameters *)userServiceParameters{
++(void)getUserService:(void (^)(Response *))block withParameters:(UserService *)userServiceParameters{
 
     NSMutableDictionary *mutDict=[NSMutableDictionary alloc];
     

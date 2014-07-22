@@ -33,7 +33,7 @@
     
 }
 
-+(void)createNewProfile:(void (^)(Response *))block WithInformation:(ProfileParameters *)info{
++(void)createNewProfile:(void (^)(Response *))block WithInformation:(Profile *)info{
 
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[info toDictionary] options:kNilOptions error:&error];

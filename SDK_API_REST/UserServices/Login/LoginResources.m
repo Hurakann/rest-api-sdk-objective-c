@@ -10,7 +10,7 @@
 
 @implementation LoginResources
 
-+ (void)getLogin:(void (^)(Response *))block withParameters:(LoginParameters *)parameters{
++ (void)getLogin:(void (^)(Response *))block withParameters:(Login *)parameters{
     
     NSString *URI=@"/v1/user/login";
     

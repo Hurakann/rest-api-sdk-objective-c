@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Response.h"
 #import "ClientGET.h"
-#import "ProfileParameters.h"
+#import "Profile.h"
 #import "ClientPOST.h"
 #import "ClientPUT.h"
 
@@ -23,7 +23,7 @@
  * \return a response instance with the http status code
  *   is returned on given completion handler.
  */
-+ (void) createNewProfile:(void (^)(Response *))block WithInformation:(ProfileParameters *)info;
++ (void) createNewProfile:(void (^)(Response *))block WithInformation:(Profile *)info;
 
 
 /*!Get a profiles list of user

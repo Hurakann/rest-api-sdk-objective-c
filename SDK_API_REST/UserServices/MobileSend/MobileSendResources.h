@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MobileSendParameters.h"
+#import "MobileSend.h"
 #import "Response.h"
 #import "ClientPOST.h"
 
@@ -20,7 +20,7 @@
  * \return a response instance with the http status code
  *   is returned on given completion handler.
  */
-+ (void) sendNativeNotification:(void (^)(Response *))block WithParameters:(MobileSendParameters *)parameters;
++ (void) sendNativeNotification:(void (^)(Response *))block WithParameters:(MobileSend *)parameters;
 
 
 @end

@@ -10,7 +10,7 @@
 
 @implementation NotificationsResources
 
-+(void)createNewNotification:(void (^)(Response *))block WithParameters:(NotificationsParameters *) params{
++(void)createNewNotification:(void (^)(Response *))block WithParameters:(Notification *) params{
 
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[params toDictionary] options:kNilOptions error:&error];
@@ -60,12 +60,12 @@
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         
         if(error == nil){
-            NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:responseBody];
-            NSDictionary *dic=[[NSDictionary alloc] initWithObjectsAndKeys:array,@"notifications_list", nil];
+            NSArray *array=[NSJSONSerialization JSONObjectWithData:responseBody options:kNilOptions error:nil];
+            NSDictionary *jsonDecode=[[NSDictionary alloc] initWithObjectsAndKeys:array,@"notifications_list", nil];
             Response *resp=[[Response alloc] init];
             resp.statusCode=statusCode;
             resp.responseBody=responseBody;
-            resp.responseBodyT=dic;
+            resp.responseBodyT=jsonDecode;
             block(resp);
         }else
             block(nil);

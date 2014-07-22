@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "MobileRegisterParameters.h"
+#import "MobileRegister.h"
 #import "Response.h"
 #import "ClientPOST.h"
 #import "ClientPUT.h"
@@ -22,7 +22,7 @@
  * \return a response instance with the http status code
  *   is returned on given completion handler.
  */
-+ (void) addMobileDeviceToUser:(void (^)(Response *))block WithParameters:(MobileRegisterParameters *)parameters;
++ (void) addMobileDeviceToUser:(void (^)(Response *))block WithParameters:(MobileRegister *)parameters;
 
 /*!Disable or enable the status of the mobile device, indicating that user can receive notifications or not. 
  *  All data are required.

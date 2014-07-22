@@ -10,7 +10,7 @@
 
 @implementation HoverBoxResources
 
-+(void)activateHoverBox:(void (^)(Response *))block WithParameters:(HoverBoxParameters *)parameters{
++(void)activateHoverBox:(void (^)(Response *))block WithParameters:(HoverBox *)parameters{
 
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[parameters toDictionary] options:kNilOptions error:&error];

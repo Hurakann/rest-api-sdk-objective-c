@@ -11,9 +11,9 @@
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
 #import "Branches.h"
-#import "FileParameters.h"
-#import "UserServiceParameters.h"
-#import "NFCParameters.h"
+#import "File.h"
+#import "UserService.h"
+#import "NFC.h"
 
 /**
  * POJO class for user json structure based on API responses.
@@ -87,11 +87,11 @@
 /** Language short description for the user (es, en, so on....) */
 @property (nonatomic, strong) NSString <Optional> *language;
 /** Information to service assigned to this user */
-@property (nonatomic, strong) UserServiceParameters <ServiceProtocol, ConvertOnDemand, Optional> *services;
+@property (nonatomic, strong) UserService <ServiceProtocol, ConvertOnDemand, Optional> *services;
 /** NFC paramters to this user */
-@property (nonatomic, strong) NFCParameters <NFCProtocol, ConvertOnDemand, Optional> *nfc;
+@property (nonatomic, strong) NSArray <NFCProtocol, ConvertOnDemand, Optional> *nfc;
 /** Files information added to this user */
-@property (nonatomic, strong) FileParameters <FileProtocol, ConvertOnDemand, Optional> *files;
+@property (nonatomic, strong) File <FileProtocol, ConvertOnDemand, Optional> *files;
 /** FMD datas to this user */
 @property (nonatomic, strong) NSArray <Optional> *fmd;
 /** Phase to keep the user (1, 2, 3 or 4) */

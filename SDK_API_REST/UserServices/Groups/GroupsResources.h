@@ -11,7 +11,7 @@
 #import "ClientGET.h"
 #import "ClientPOST.h"
 #import "ClientPUT.h"
-#import "GroupParameters.h"
+#import "Group.h"
 
 @interface GroupsResources : NSObject
 
@@ -33,7 +33,7 @@
  * \return a response instance with the http status code
  *   is returned on given completion handler.
  */
-+ (void) updateGroup:(void (^)(Response *))block WithParameters:(GroupParameters *)parameters ;
++ (void) updateGroup:(void (^)(Response *))block WithParameters:(Group *)parameters ;
 
 
 /*! Obtain the groups list of user
