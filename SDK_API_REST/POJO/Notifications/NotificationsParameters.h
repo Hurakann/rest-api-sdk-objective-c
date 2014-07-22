@@ -13,7 +13,9 @@
 
 /** Message for notification */
 @property (nonatomic, strong) NSString <Optional> *message;
-/** Broot for current user */
+/** Branch id of parent user */
+@property (nonatomic, strong) NSString <Optional> *branch_id;
+/** Broot of user */
 @property (nonatomic, strong) NSString <Optional> *broot;
 /** Title for notification */
 @property (nonatomic, strong) NSString <Optional> *title;

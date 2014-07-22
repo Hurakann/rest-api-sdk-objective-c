@@ -13,17 +13,17 @@
 
 @implementation UserResourceServices
 
-+(void)assignUserByService:(void (^)(Response *))block withParameters:(UserInformationService *)userServiceParameters{
++(void)assignUserByService:(void (^)(Response *))block withParameters:(UserServiceParameters *)userServiceParameters{
     
     NSMutableDictionary *mutDict=[NSMutableDictionary alloc];
     
-    if([userServiceParameters.userId isEqualToString:@"all"] && userServiceParameters.owner==nil){
-        [mutDict setObject:userServiceParameters.userId forKey:@"user_id"];
+    if([userServiceParameters.user_id isEqualToString:@"all"] && userServiceParameters.owner==nil){
+        [mutDict setObject:userServiceParameters.user_id forKey:@"user_id"];
     }else if (userServiceParameters.owner!=nil){
-        [mutDict setObject:userServiceParameters.userId forKey:@"user_id"];
+        [mutDict setObject:userServiceParameters.user_id forKey:@"user_id"];
         [mutDict setObject:userServiceParameters.owner forKey:@"owner"];
     }else{
-        [mutDict setObject:userServiceParameters.userId forKey:@"user_id"];
+        [mutDict setObject:userServiceParameters.user_id forKey:@"user_id"];
         [mutDict setObject:userServiceParameters.owner forKey:@"service_id"];
     }
     
@@ -53,7 +53,7 @@
     
 }
 
-+(void)updateUserService:(void (^)(Response *))block withParameters:(UserInformationService *)userServiceParameters{
++(void)updateUserService:(void (^)(Response *))block withParameters:(UserServiceParameters *)userServiceParameters{
 
     NSString *uri=@"/v1/user/services";
     NSString *requestBodyString=[userServiceParameters toJSONString];
@@ -72,17 +72,17 @@
     
 }
 
-+(void)getUserService:(void (^)(Response *))block withParameters:(UserInformationService *)userServiceParameters{
++(void)getUserService:(void (^)(Response *))block withParameters:(UserServiceParameters *)userServiceParameters{
 
     NSMutableDictionary *mutDict=[NSMutableDictionary alloc];
     
-    if([userServiceParameters.userId isEqualToString:@"all"] && userServiceParameters.owner==nil){
-        [mutDict setObject:userServiceParameters.userId forKey:@"user_id"];
+    if([userServiceParameters.user_id isEqualToString:@"all"] && userServiceParameters.owner==nil){
+        [mutDict setObject:userServiceParameters.user_id forKey:@"user_id"];
     }else if (userServiceParameters.owner!=nil){
-        [mutDict setObject:userServiceParameters.userId forKey:@"user_id"];
+        [mutDict setObject:userServiceParameters.user_id forKey:@"user_id"];
         [mutDict setObject:userServiceParameters.owner forKey:@"owner"];
     }else{
-        [mutDict setObject:userServiceParameters.userId forKey:@"user_id"];
+        [mutDict setObject:userServiceParameters.user_id forKey:@"user_id"];
         [mutDict setObject:userServiceParameters.owner forKey:@"service_id"];
     }
     

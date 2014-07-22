@@ -16,7 +16,7 @@
 /** Status of notification */
 @property (nonatomic, assign) BOOL read;
 /** Identifier for notification */
-@property (nonatomic, strong) NSString <Optional> *notificationId;
+@property (nonatomic, strong) NSString <Optional> *notification_id;
 /** Time for notification */
 @property (nonatomic, strong) NSString <Optional> *time;
 /** Date for notification */

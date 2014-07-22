@@ -22,7 +22,7 @@
  * \return a response instance with the http status code,
  *   is returned on given completion handler.
  */
-+ (void) postUserTags:(void (^)(Response *))block withUserID:(NSString *) userId AndTags:(NSArray *)tags;
++ (void) addTagsToUser:(void (^)(Response *))block WithUserID:(NSString *) userId AndTags:(NSArray *)tags;
 
 
 /*!All data are required, the tags is an array of strings, and you could customize as you want.
@@ -33,7 +33,7 @@
  * \return a response instance with the http status code,
  *   is returned on given completion handler.
  */
-+ (void) putUserTags:(void (^)(Response *))block withUserID:(NSString *) userId AndTags:(NSArray *)tags;
++ (void) updateTagsToUser:(void (^)(Response *))block WithUserID:(NSString *) userId AndTags:(NSArray *)tags;
 
 
 /*!Get specific features of the user

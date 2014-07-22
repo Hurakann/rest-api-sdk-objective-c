@@ -56,8 +56,8 @@
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
         if(error==nil){
-            NSError *error;
-            NSDictionary *jsonDecode=[NSJSONSerialization JSONObjectWithData:responseBody options:kNilOptions error:&error];
+            NSArray *array=[NSJSONSerialization JSONObjectWithData:responseBody options:kNilOptions error:nil];
+            NSDictionary *jsonDecode=[[NSDictionary alloc] initWithObjectsAndKeys:array,@"nfcCards_list", nil];
             Response *resp=[[Response alloc] init];
             resp.statusCode=statusCode;
             resp.responseBody=responseBody;

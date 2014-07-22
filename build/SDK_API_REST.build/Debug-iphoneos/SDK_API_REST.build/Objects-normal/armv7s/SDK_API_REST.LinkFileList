@@ -1,5 +1,6 @@
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/UserResource.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/MergeUserParameters.o
+/Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/UserServiceParameters.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/UserResourceSearch.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/UserGetInformationParameters.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/NotificationResponseParameters.o
@@ -15,9 +16,9 @@
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/LoginChangePasswordParameters.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/JSONModel.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/LoginParameters.o
+/Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/UserSearchParametersResponse.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/SharedData.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/CatalogsResources.o
-/Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/UserInformationService.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/AvailabilityResources.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/JSONModel+CoreData.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/MobileSendParameters.o
@@ -46,7 +47,6 @@
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/HoverBoxResources.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/ClientGET.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/MobileSendResources.o
-/Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/UserInformationSearchResponse.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/MobileRegisterResources.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/UserGetParameters.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/UserPhoneExtensionResources.o
@@ -56,8 +56,8 @@
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/ClientPOST.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/UserColorResource.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/HoverBoxParameters.o
+/Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/UserSearchParameters.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/LoginResetParameters.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/CatalogsParameters.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/ClientDELETE.o
 /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/MobileRegisterParameters.o
-/Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/build/SDK_API_REST.build/Debug-iphoneos/SDK_API_REST.build/Objects-normal/armv7s/UserInformationSearch.o

@@ -56,7 +56,7 @@
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
         if(error==nil){
-            NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:responseBody];
+            NSArray *array=[NSJSONSerialization JSONObjectWithData:responseBody options:kNilOptions error:nil];
             NSDictionary *jsonDecode=[[NSDictionary alloc] initWithObjectsAndKeys:array,@"users_list", nil];
             Response *resp=[[Response alloc] init];
             resp.statusCode=statusCode;

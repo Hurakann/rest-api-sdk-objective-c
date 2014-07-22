@@ -12,7 +12,7 @@
 #import "JSONModel.h"
 #import "Branches.h"
 #import "FileParameters.h"
-#import "UserInformationService.h"
+#import "UserServiceParameters.h"
 #import "NFCParameters.h"
 
 /**
@@ -87,7 +87,7 @@
 /** Language short description for the user (es, en, so on....) */
 @property (nonatomic, strong) NSString <Optional> *language;
 /** Information to service assigned to this user */
-@property (nonatomic, strong) UserInformationService <ServiceProtocol, ConvertOnDemand, Optional> *services;
+@property (nonatomic, strong) UserServiceParameters <ServiceProtocol, ConvertOnDemand, Optional> *services;
 /** NFC paramters to this user */
 @property (nonatomic, strong) NFCParameters <NFCProtocol, ConvertOnDemand, Optional> *nfc;
 /** Files information added to this user */

@@ -57,14 +57,14 @@
 
 + (void) createUser:(void (^)(Response *))block withParameters:(User *) userParameters;{
     
-    /*NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self completeParametersNameToRequest:userParameters] options:kNilOptions error:&error];*/
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self completeParametersNameToRequest:userParameters] options:kNilOptions error:&error];
     
-    NSString *requestBodyString=[userParameters toJSONString];
+    //NSString *requestBodyString=[userParameters toJSONString];
     
-    NSLog(@"JSON String: %@",requestBodyString);
+    //NSLog(@"JSON String: %@",requestBodyString);
     
-    NSData *requestBodyJSON = [requestBodyString dataUsingEncoding:NSUTF8StringEncoding];
+    //NSData *requestBodyJSON = [requestBodyString dataUsingEncoding:NSUTF8StringEncoding];
     NSString *uri=@"/v1/user";
     
     [ClientPOST postRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
@@ -82,7 +82,7 @@
             block(response);
         }
         
-    } body:requestBodyJSON andURI:uri];
+    } body:jsonData andURI:uri];
     
 }
 

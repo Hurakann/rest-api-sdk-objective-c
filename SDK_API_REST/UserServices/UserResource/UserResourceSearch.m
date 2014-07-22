@@ -12,13 +12,11 @@
 
 @implementation UserResourceSearch
 
-+(void)searchUser:(void (^)(Response *))block WithParameters:(UserInformationSearch *)searchParameters{
++(void)searchUser:(void (^)(Response *))block WithParameters:(UserSearchParameters *)searchParameters{
 
     NSString *uri=@"/v1/user/search";
     NSMutableDictionary *paramsSend=[[NSMutableDictionary alloc] init];
     paramsSend=[[searchParameters toDictionary] mutableCopy];
-    
-   // NSLog(@"Params: %d %d",[[paramsSend objectForKey:@"page"] intValue],[[paramsSend objectForKey:@"pagination"] intValue]);
     
     if([[paramsSend objectForKey:@"pagination"] intValue] == 0)
         [paramsSend removeObjectForKey:@"pagination"];
@@ -26,12 +24,11 @@
     if([[paramsSend objectForKey:@"page"] intValue] == 0)
         [paramsSend removeObjectForKey:@"page"];
     
-   // NSLog(@"PARAMS %@",paramsSend);
+    NSLog(@"PARAMS %@",paramsSend);
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
         Response *res;
-        
         if(error)
             block(res);
         else{

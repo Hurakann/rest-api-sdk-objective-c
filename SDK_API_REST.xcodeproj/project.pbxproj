@@ -44,10 +44,6 @@
 		FC12AB421961F94F0043A1C2 /* LoginParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FC12AB401961F94F0043A1C2 /* LoginParameters.m */; };
 		FC12AB491961F9830043A1C2 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FC12AB441961F9830043A1C2 /* User.m */; };
 		FC12AB4A1961F9830043A1C2 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = FC12AB441961F9830043A1C2 /* User.m */; };
-		FC12AB4B1961F9830043A1C2 /* UserInformationSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = FC12AB461961F9830043A1C2 /* UserInformationSearch.m */; };
-		FC12AB4C1961F9830043A1C2 /* UserInformationSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = FC12AB461961F9830043A1C2 /* UserInformationSearch.m */; };
-		FC12AB4D1961F9830043A1C2 /* UserInformationService.m in Sources */ = {isa = PBXBuildFile; fileRef = FC12AB481961F9830043A1C2 /* UserInformationService.m */; };
-		FC12AB4E1961F9830043A1C2 /* UserInformationService.m in Sources */ = {isa = PBXBuildFile; fileRef = FC12AB481961F9830043A1C2 /* UserInformationService.m */; };
 		FC12AB591961F9C70043A1C2 /* ClientDELETE.m in Sources */ = {isa = PBXBuildFile; fileRef = FC12AB501961F9C70043A1C2 /* ClientDELETE.m */; };
 		FC12AB5A1961F9C70043A1C2 /* ClientDELETE.m in Sources */ = {isa = PBXBuildFile; fileRef = FC12AB501961F9C70043A1C2 /* ClientDELETE.m */; };
 		FC12AB5B1961F9C70043A1C2 /* ClientGET.m in Sources */ = {isa = PBXBuildFile; fileRef = FC12AB521961F9C70043A1C2 /* ClientGET.m */; };
@@ -120,6 +116,9 @@
 		FC55A65D1964AE8800E25CE6 /* LoginResetParameters.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC55A6431964ADC500E25CE6 /* LoginResetParameters.h */; };
 		FC55A65F1964AE8800E25CE6 /* LoginChangePasswordParameters.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC55A6411964ADC500E25CE6 /* LoginChangePasswordParameters.h */; };
 		FC55A6601964AE8800E25CE6 /* UserGetInformationParameters.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC55A6591964AE5F00E25CE6 /* UserGetInformationParameters.h */; };
+		FC70944C197DE4B800C813E8 /* UserSearchParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FC70944B197DE4B800C813E8 /* UserSearchParameters.m */; };
+		FC70944F197DE6E000C813E8 /* UserSearchParametersResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FC70944E197DE6E000C813E8 /* UserSearchParametersResponse.m */; };
+		FC709455197DE9AB00C813E8 /* UserServiceParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FC709454197DE9AB00C813E8 /* UserServiceParameters.m */; };
 		FCA5C66D195BA239004697BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA5C66C195BA239004697BB /* Foundation.framework */; };
 		FCA5C67B195BA239004697BB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA5C67A195BA239004697BB /* XCTest.framework */; };
 		FCA5C67C195BA239004697BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA5C66C195BA239004697BB /* Foundation.framework */; };
@@ -139,8 +138,6 @@
 		FCB0DCA119621E7C00E5A136 /* SharedData.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC12AB3A1961F8B10043A1C2 /* SharedData.h */; };
 		FCB0DCA219621E7C00E5A136 /* LoginParameters.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC12AB3F1961F94F0043A1C2 /* LoginParameters.h */; };
 		FCB0DCA319621E7C00E5A136 /* User.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC12AB431961F9830043A1C2 /* User.h */; };
-		FCB0DCA419621E7C00E5A136 /* UserInformationSearch.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC12AB451961F9830043A1C2 /* UserInformationSearch.h */; };
-		FCB0DCA519621E7C00E5A136 /* UserInformationService.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC12AB471961F9830043A1C2 /* UserInformationService.h */; };
 		FCB0DCA619621E7C00E5A136 /* ClientDELETE.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC12AB4F1961F9C70043A1C2 /* ClientDELETE.h */; };
 		FCB0DCA719621E7C00E5A136 /* ClientGET.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC12AB511961F9C70043A1C2 /* ClientGET.h */; };
 		FCB0DCA819621E7C00E5A136 /* ClientPOST.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC12AB531961F9C70043A1C2 /* ClientPOST.h */; };
@@ -152,7 +149,6 @@
 		FCBCC6491970438400E52145 /* LoginResources.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBCC6481970438400E52145 /* LoginResources.m */; };
 		FCBCC64C1970697E00E52145 /* MergeUserParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBCC64B1970697E00E52145 /* MergeUserParameters.m */; };
 		FCBCC64F197073C400E52145 /* NotificationResponseParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBCC64E197073C400E52145 /* NotificationResponseParameters.m */; };
-		FCBCC6521970762E00E52145 /* UserInformationSearchResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBCC6511970762E00E52145 /* UserInformationSearchResponse.m */; };
 		FCBCC6561970898900E52145 /* MobileRegisterParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBCC6551970898900E52145 /* MobileRegisterParameters.m */; };
 		FCBCC6571970898900E52145 /* MobileRegisterParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBCC6551970898900E52145 /* MobileRegisterParameters.m */; };
 		FCBCC65B19708B6900E52145 /* MobileRegisterResources.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBCC65A19708B6900E52145 /* MobileRegisterResources.m */; };
@@ -174,7 +170,6 @@
 		FCBCC66D1970A62000E52145 /* MergeUserParameters.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FCBCC64A1970697E00E52145 /* MergeUserParameters.h */; };
 		FCBCC66E1970A62000E52145 /* ProfileParameters.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FCBCC65D19709BBB00E52145 /* ProfileParameters.h */; };
 		FCBCC66F1970A62000E52145 /* LoginResponseParameters.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC43A477196DF38E00E16FC7 /* LoginResponseParameters.h */; };
-		FCBCC6701970A62000E52145 /* UserInformationSearchResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FCBCC6501970762E00E52145 /* UserInformationSearchResponse.h */; };
 		FCBCC6711970A62000E52145 /* UserGetParameters.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC43A47B196E007E00E16FC7 /* UserGetParameters.h */; };
 		FCBCC6721970A62000E52145 /* MobileRegisterResources.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FCBCC65919708B6900E52145 /* MobileRegisterResources.h */; };
 		FCBCC6731970A62000E52145 /* MobileSendResources.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC43A473196DF10C00E16FC7 /* MobileSendResources.h */; };
@@ -244,7 +239,6 @@
 				FCBCC66D1970A62000E52145 /* MergeUserParameters.h in CopyFiles */,
 				FCBCC66E1970A62000E52145 /* ProfileParameters.h in CopyFiles */,
 				FCBCC66F1970A62000E52145 /* LoginResponseParameters.h in CopyFiles */,
-				FCBCC6701970A62000E52145 /* UserInformationSearchResponse.h in CopyFiles */,
 				FCBCC6711970A62000E52145 /* UserGetParameters.h in CopyFiles */,
 				FCBCC6721970A62000E52145 /* MobileRegisterResources.h in CopyFiles */,
 				FCBCC6731970A62000E52145 /* MobileSendResources.h in CopyFiles */,
@@ -282,8 +276,6 @@
 				FCB0DCA119621E7C00E5A136 /* SharedData.h in CopyFiles */,
 				FCB0DCA219621E7C00E5A136 /* LoginParameters.h in CopyFiles */,
 				FCB0DCA319621E7C00E5A136 /* User.h in CopyFiles */,
-				FCB0DCA419621E7C00E5A136 /* UserInformationSearch.h in CopyFiles */,
-				FCB0DCA519621E7C00E5A136 /* UserInformationService.h in CopyFiles */,
 				FCB0DCA619621E7C00E5A136 /* ClientDELETE.h in CopyFiles */,
 				FCB0DCA719621E7C00E5A136 /* ClientGET.h in CopyFiles */,
 				FCB0DCA819621E7C00E5A136 /* ClientPOST.h in CopyFiles */,
@@ -323,10 +315,6 @@
 		FC12AB401961F94F0043A1C2 /* LoginParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginParameters.m; path = POJO/Login/LoginParameters.m; sourceTree = "<group>"; };
 		FC12AB431961F9830043A1C2 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = POJO/User/User.h; sourceTree = "<group>"; };
 		FC12AB441961F9830043A1C2 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = POJO/User/User.m; sourceTree = "<group>"; };
-		FC12AB451961F9830043A1C2 /* UserInformationSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInformationSearch.h; path = POJO/User/UserInformationSearch.h; sourceTree = "<group>"; };
-		FC12AB461961F9830043A1C2 /* UserInformationSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInformationSearch.m; path = POJO/User/UserInformationSearch.m; sourceTree = "<group>"; };
-		FC12AB471961F9830043A1C2 /* UserInformationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInformationService.h; path = POJO/User/UserInformationService.h; sourceTree = "<group>"; };
-		FC12AB481961F9830043A1C2 /* UserInformationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInformationService.m; path = POJO/User/UserInformationService.m; sourceTree = "<group>"; };
 		FC12AB4F1961F9C70043A1C2 /* ClientDELETE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClientDELETE.h; path = HTTP/ClientDELETE.h; sourceTree = "<group>"; };
 		FC12AB501961F9C70043A1C2 /* ClientDELETE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClientDELETE.m; path = HTTP/ClientDELETE.m; sourceTree = "<group>"; };
 		FC12AB511961F9C70043A1C2 /* ClientGET.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClientGET.h; path = HTTP/ClientGET.h; sourceTree = "<group>"; };
@@ -393,6 +381,12 @@
 		FC55A6441964ADC500E25CE6 /* LoginResetParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginResetParameters.m; path = POJO/Login/LoginResetParameters.m; sourceTree = "<group>"; };
 		FC55A6591964AE5F00E25CE6 /* UserGetInformationParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserGetInformationParameters.h; path = POJO/User/UserGetInformationParameters.h; sourceTree = "<group>"; };
 		FC55A65A1964AE5F00E25CE6 /* UserGetInformationParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserGetInformationParameters.m; path = POJO/User/UserGetInformationParameters.m; sourceTree = "<group>"; };
+		FC70944A197DE4B800C813E8 /* UserSearchParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSearchParameters.h; path = POJO/User/UserSearchParameters.h; sourceTree = "<group>"; };
+		FC70944B197DE4B800C813E8 /* UserSearchParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSearchParameters.m; path = POJO/User/UserSearchParameters.m; sourceTree = "<group>"; };
+		FC70944D197DE6E000C813E8 /* UserSearchParametersResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserSearchParametersResponse.h; path = POJO/User/UserSearchParametersResponse.h; sourceTree = "<group>"; };
+		FC70944E197DE6E000C813E8 /* UserSearchParametersResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserSearchParametersResponse.m; path = POJO/User/UserSearchParametersResponse.m; sourceTree = "<group>"; };
+		FC709453197DE9AB00C813E8 /* UserServiceParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserServiceParameters.h; path = POJO/User/UserServiceParameters.h; sourceTree = "<group>"; };
+		FC709454197DE9AB00C813E8 /* UserServiceParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserServiceParameters.m; path = POJO/User/UserServiceParameters.m; sourceTree = "<group>"; };
 		FCA5C669195BA239004697BB /* libSDK_API_REST.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSDK_API_REST.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA5C66C195BA239004697BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FCA5C670195BA239004697BB /* SDK_API_REST-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SDK_API_REST-Prefix.pch"; sourceTree = "<group>"; };
@@ -408,8 +402,6 @@
 		FCBCC64B1970697E00E52145 /* MergeUserParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeUserParameters.m; sourceTree = "<group>"; };
 		FCBCC64D197073C400E52145 /* NotificationResponseParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationResponseParameters.h; sourceTree = "<group>"; };
 		FCBCC64E197073C400E52145 /* NotificationResponseParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationResponseParameters.m; sourceTree = "<group>"; };
-		FCBCC6501970762E00E52145 /* UserInformationSearchResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInformationSearchResponse.h; path = POJO/User/UserInformationSearchResponse.h; sourceTree = "<group>"; };
-		FCBCC6511970762E00E52145 /* UserInformationSearchResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInformationSearchResponse.m; path = POJO/User/UserInformationSearchResponse.m; sourceTree = "<group>"; };
 		FCBCC6541970898900E52145 /* MobileRegisterParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileRegisterParameters.h; sourceTree = "<group>"; };
 		FCBCC6551970898900E52145 /* MobileRegisterParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileRegisterParameters.m; sourceTree = "<group>"; };
 		FCBCC65919708B6900E52145 /* MobileRegisterResources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileRegisterResources.h; sourceTree = "<group>"; };
@@ -616,12 +608,12 @@
 			children = (
 				FC12AB431961F9830043A1C2 /* User.h */,
 				FC12AB441961F9830043A1C2 /* User.m */,
-				FC12AB451961F9830043A1C2 /* UserInformationSearch.h */,
-				FC12AB461961F9830043A1C2 /* UserInformationSearch.m */,
-				FCBCC6501970762E00E52145 /* UserInformationSearchResponse.h */,
-				FCBCC6511970762E00E52145 /* UserInformationSearchResponse.m */,
-				FC12AB471961F9830043A1C2 /* UserInformationService.h */,
-				FC12AB481961F9830043A1C2 /* UserInformationService.m */,
+				FC70944A197DE4B800C813E8 /* UserSearchParameters.h */,
+				FC70944B197DE4B800C813E8 /* UserSearchParameters.m */,
+				FC70944D197DE6E000C813E8 /* UserSearchParametersResponse.h */,
+				FC70944E197DE6E000C813E8 /* UserSearchParametersResponse.m */,
+				FC709453197DE9AB00C813E8 /* UserServiceParameters.h */,
+				FC709454197DE9AB00C813E8 /* UserServiceParameters.m */,
 				FC55A6591964AE5F00E25CE6 /* UserGetInformationParameters.h */,
 				FC55A65A1964AE5F00E25CE6 /* UserGetInformationParameters.m */,
 				FC2A6AB01965BA9900B0AD28 /* UserRefreshInformation.h */,
@@ -1124,6 +1116,7 @@
 			files = (
 				FC12AB6D1961FA460043A1C2 /* UserResource.m in Sources */,
 				FCBCC64C1970697E00E52145 /* MergeUserParameters.m in Sources */,
+				FC709455197DE9AB00C813E8 /* UserServiceParameters.m in Sources */,
 				FC12AB6F1961FA460043A1C2 /* UserResourceSearch.m in Sources */,
 				FC55A65B1964AE5F00E25CE6 /* UserGetInformationParameters.m in Sources */,
 				FCBCC64F197073C400E52145 /* NotificationResponseParameters.m in Sources */,
@@ -1139,9 +1132,9 @@
 				FC55A6471964ADC500E25CE6 /* LoginChangePasswordParameters.m in Sources */,
 				FC12AB2C1961F8870043A1C2 /* JSONModel.m in Sources */,
 				FC12AB411961F94F0043A1C2 /* LoginParameters.m in Sources */,
+				FC70944F197DE6E000C813E8 /* UserSearchParametersResponse.m in Sources */,
 				FC12AB3C1961F8B10043A1C2 /* SharedData.m in Sources */,
 				FC43A45D196DD89C00E16FC7 /* CatalogsResources.m in Sources */,
-				FC12AB4D1961F9830043A1C2 /* UserInformationService.m in Sources */,
 				FC3EF771196B40E9006F136A /* AvailabilityResources.m in Sources */,
 				FC12AB2A1961F8870043A1C2 /* JSONModel+CoreData.m in Sources */,
 				FC43A470196DEE1400E16FC7 /* MobileSendParameters.m in Sources */,
@@ -1170,7 +1163,6 @@
 				FC3EF776196B4CF4006F136A /* HoverBoxResources.m in Sources */,
 				FC12AB5B1961F9C70043A1C2 /* ClientGET.m in Sources */,
 				FC43A475196DF10C00E16FC7 /* MobileSendResources.m in Sources */,
-				FCBCC6521970762E00E52145 /* UserInformationSearchResponse.m in Sources */,
 				FCBCC65B19708B6900E52145 /* MobileRegisterResources.m in Sources */,
 				FC43A47D196E007E00E16FC7 /* UserGetParameters.m in Sources */,
 				FCCF7D3F196767FB00D933E9 /* UserPhoneExtensionResources.m in Sources */,
@@ -1180,11 +1172,11 @@
 				FC12AB5D1961F9C70043A1C2 /* ClientPOST.m in Sources */,
 				FCCF7D4419676CB600D933E9 /* UserColorResource.m in Sources */,
 				FC3EF77B196B4D16006F136A /* HoverBoxParameters.m in Sources */,
+				FC70944C197DE4B800C813E8 /* UserSearchParameters.m in Sources */,
 				FC55A6491964ADC500E25CE6 /* LoginResetParameters.m in Sources */,
 				FC3EF781196B65C7006F136A /* CatalogsParameters.m in Sources */,
 				FC12AB591961F9C70043A1C2 /* ClientDELETE.m in Sources */,
 				FCBCC6561970898900E52145 /* MobileRegisterParameters.m in Sources */,
-				FC12AB4B1961F9830043A1C2 /* UserInformationSearch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1204,11 +1196,9 @@
 				FC12AB5C1961F9C70043A1C2 /* ClientGET.m in Sources */,
 				FC55A64A1964ADC500E25CE6 /* LoginResetParameters.m in Sources */,
 				FC12AB391961F8870043A1C2 /* JSONValueTransformer.m in Sources */,
-				FC12AB4E1961F9830043A1C2 /* UserInformationService.m in Sources */,
 				FC43A476196DF10C00E16FC7 /* MobileSendResources.m in Sources */,
 				FCC344C0196EE14B003323DD /* FileParameters.m in Sources */,
 				FC3EF772196B40E9006F136A /* AvailabilityResources.m in Sources */,
-				FC12AB4C1961F9830043A1C2 /* UserInformationSearch.m in Sources */,
 				FC12AB371961F8870043A1C2 /* JSONKeyMapper.m in Sources */,
 				FC12AB601961F9C70043A1C2 /* ClientPUT.m in Sources */,
 				FC3EF75D196AF57F006F136A /* FingerprintResources.m in Sources */,

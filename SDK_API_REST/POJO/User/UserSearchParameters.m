@@ -1,4 +1,4 @@
-//  UserInformationService.m
+//  UserSearchParameters.h
 //
 //  @version 1.0
 //  @author Eder Gomez Nocelo, edegom.nocelo@gmail.com
@@ -8,14 +8,8 @@
 // Redistribution and use in any form, with or without modification,
 // is strictly prohibited.
 
+#import "UserSearchParameters.h"
 
-#import "UserInformationService.h"
-
-@implementation UserInformationService
-
-+(JSONKeyMapper*)keyMapper
-{
-    return [JSONKeyMapper mapperFromUnderscoreCaseToCamelCase];
-}
+@implementation UserSearchParameters
 
 @end

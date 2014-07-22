@@ -1,4 +1,4 @@
-//  UserInformationSearch.h
+//  UserSearchParameters.h
 //
 //  @version 1.0
 //  @author Eder Gomez Nocelo, edegom.nocelo@gmail.com
@@ -8,12 +8,15 @@
 // Redistribution and use in any form, with or without modification,
 // is strictly prohibited.
 
+
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
+
 /**
- POJO class for UserInformationSearch json structure based on API responses.
+ POJO class for UserSearchParameters json structure based on API responses.
  */
-@interface UserInformationSearch : JSONModel
+
+@interface UserSearchParameters : JSONModel
 
 /** The parent branch_id of the user */
 @property (nonatomic, strong) NSString <Optional> *branch_id;

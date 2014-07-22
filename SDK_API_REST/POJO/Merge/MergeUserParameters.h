@@ -14,6 +14,6 @@
 @property (nonatomic, strong) NSString <Optional> *user_id;
 @property (nonatomic, strong) NSString <Optional> *name;
 @property (nonatomic, strong) NSString <Optional> *merge;
-@property (nonatomic, strong) NSString <Optional> *age;
+
 
 @end

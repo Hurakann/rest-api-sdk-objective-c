@@ -10,9 +10,4 @@
 
 @implementation NotificationsParameters
 
-+(JSONKeyMapper*)keyMapper
-{
-    return [JSONKeyMapper mapperFromUnderscoreCaseToCamelCase];
-}
-
 @end

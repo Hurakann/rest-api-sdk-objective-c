@@ -10,10 +10,6 @@
 
 @implementation NFCParameters
 
-+(JSONKeyMapper*)keyMapper
-{
-    return [JSONKeyMapper mapperFromUnderscoreCaseToCamelCase];
-}
 
 +(BOOL)propertyIsOptional:(NSString *)propertyName{
     
