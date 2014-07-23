@@ -1,4 +1,4 @@
-//  LoginResetParameters.h
+//  LoginResetParameters.m
 //
 //  @version 1.0
 //  @author Eder Gomez Nocelo, edegom.nocelo@gmail.com

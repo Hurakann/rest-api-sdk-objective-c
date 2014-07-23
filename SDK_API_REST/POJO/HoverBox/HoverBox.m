@@ -1,10 +1,12 @@
-//
 //  HoverBox.m
-//  SDK_API_REST
 //
-//  Created by Eder Gomez Nocelo on 22/07/14.
-//  Copyright (c) 2014 Hova Networks. All rights reserved.
+//  @version 1.0
+//  @author Eder Gomez Nocelo, eder.nocelo@hovanetworks.com
 //
+
+// Copyright (c) 2013-2014 Hova Networks S.A.P.I. de C.V.
+// Redistribution and use in any form, with or without modification,
+// is strictly prohibited.
 
 #import "HoverBox.h"
 

@@ -3,7 +3,6 @@
 //  @version 1.0
 //  @author Eder Gomez Nocelo, edegom.nocelo@gmail.com
 //
-
 // Copyright (c) 2013-2014 Hova Networks S.A.P.I. de C.V.
 // Redistribution and use in any form, with or without modification,
 // is strictly prohibited.
@@ -16,7 +15,7 @@
 #import "NFC.h"
 
 /**
- * POJO class for user json structure based on API responses.
+ * POJO class for User information on json structure based on API request.
  */
 @interface User : JSONModel
 
@@ -87,11 +86,11 @@
 /** Language short description for the user (es, en, so on....) */
 @property (nonatomic, strong) NSString <Optional> *language;
 /** Information to service assigned to this user */
-@property (nonatomic, strong) UserService <ServiceProtocol, ConvertOnDemand, Optional> *services;
+@property (nonatomic, strong) NSArray <ServiceProtocol, ConvertOnDemand, Optional> *services;
 /** NFC paramters to this user */
 @property (nonatomic, strong) NSArray <NFCProtocol, ConvertOnDemand, Optional> *nfc;
 /** Files information added to this user */
-@property (nonatomic, strong) File <FileProtocol, ConvertOnDemand, Optional> *files;
+@property (nonatomic, strong) NSArray <FileProtocol, ConvertOnDemand, Optional> *files;
 /** FMD datas to this user */
 @property (nonatomic, strong) NSArray <Optional> *fmd;
 /** Phase to keep the user (1, 2, 3 or 4) */

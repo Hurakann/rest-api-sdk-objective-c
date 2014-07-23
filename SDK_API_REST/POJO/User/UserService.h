@@ -1,14 +1,20 @@
 //
 //  UserService.h
-//  SDK_API_REST
 //
-//  Created by Eder Gomez Nocelo on 22/07/14.
-//  Copyright (c) 2014 Hova Networks. All rights reserved.
+//  @version 1.0
+//  @author Eder Gomez Nocelo, edegom.nocelo@gmail.com
 //
+
+// Copyright (c) 2013-2014 Hova Networks S.A.P.I. de C.V.
+// Redistribution and use in any form, with or without modification,
+// is strictly prohibited.
 
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
 
+/**
+ * POJO class for User services information on json structure based on API request.
+ */
 @interface UserService : JSONModel
 
 /** Activation date of the service (format YYYY-MM-DD) */

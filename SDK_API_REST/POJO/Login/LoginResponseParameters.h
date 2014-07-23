@@ -1,15 +1,22 @@
 //
 //  LoginResponseParameters.h
-//  SDK_API_REST
 //
-//  Created by Eder Gomez Nocelo on 09/07/14.
-//  Copyright (c) 2014 Hova Networks. All rights reserved.
+//  @version 1.0
+//  @author Eder Gomez Nocelo, edegom.nocelo@gmail.com
 //
+
+// Copyright (c) 2013-2014 Hova Networks S.A.P.I. de C.V.
+// Redistribution and use in any form, with or without modification,
+// is strictly prohibited.
+
 
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
 #import "Branches.h"
 
+/**
+ * POJO class for Login response parameters information json structure based on HOVER API response.
+ */
 @interface LoginResponseParameters : JSONModel
 
 /** User id of the parent user */

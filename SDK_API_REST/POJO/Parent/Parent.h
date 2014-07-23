@@ -1,10 +1,13 @@
 //
 //  Parent.h
-//  SDK_API_REST
 //
-//  Created by Eder Gomez Nocelo on 03/07/14.
-//  Copyright (c) 2014 Hova Networks. All rights reserved.
+//  @version 1.0
+//  @author Eder Gomez Nocelo, eder.nocelo@hovanetworks.com
 //
+
+// Copyright (c) 2013-2014 Hova Networks S.A.P.I. de C.V.
+// Redistribution and use in any form, with or without modification,
+// is strictly prohibited.
 
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
@@ -14,9 +17,13 @@
  */
 @interface Parent : JSONModel
 
+/** name of the parent user */
 @property (nonatomic, strong) NSString <Optional> *name;
+/** id of the parent user */
 @property (nonatomic, strong) NSString <Optional> *user_d;
+/** branch id of the parent user */
 @property (nonatomic, strong) NSString <Optional> *branch_d;
+/** color user, this case blue. */
 @property (nonatomic, strong) NSString <Optional> *coloruser;
 
 @end

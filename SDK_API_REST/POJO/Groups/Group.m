@@ -1,10 +1,12 @@
+//  Group.h
 //
-//  Group.m
-//  SDK_API_REST
+//  @version 1.0
+//  @author Eder Gomez Nocelo, eder.nocelo@hovanetworks.com
 //
-//  Created by Eder Gomez Nocelo on 22/07/14.
-//  Copyright (c) 2014 Hova Networks. All rights reserved.
-//
+
+// Copyright (c) 2013-2014 Hova Networks S.A.P.I. de C.V.
+// Redistribution and use in any form, with or without modification,
+// is strictly prohibited.
 
 #import "Group.h"
 

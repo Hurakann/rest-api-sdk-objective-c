@@ -21,11 +21,9 @@
 
 
 /*!Find all users matching the incoming data set
- *
- * \param UserInformationSearch object. Contains basics datas to find a user
- *
- * \return a response instance with the http status code and the body decoded as json and in a class translation,
- *          is returned on given completion handler.
+   \param UserInformationSearch object. Contains basics datas to find a user
+   \return a response instance with the http status code and the body decoded as json and in a class translation,
+        is returned on given completion handler.
  */
 + (void) searchUser:(void (^)(Response *))block WithParameters:(UserSearch *) searchParameters;
 

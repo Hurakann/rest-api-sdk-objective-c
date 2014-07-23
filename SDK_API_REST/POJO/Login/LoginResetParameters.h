@@ -12,7 +12,7 @@
 #import "JSONModel.h"
 
 /**
- * POJO class for reset datas to login based on API responses.
+ * POJO class for Login reset parameters information json structure based on HOVER API request.
  */
 @interface LoginResetParameters : JSONModel
 
