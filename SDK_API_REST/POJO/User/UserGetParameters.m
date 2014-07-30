@@ -13,11 +13,9 @@
 
 @implementation UserGetParameters
 
-+(BOOL)propertyIsOptional:(NSString *)propertyName{
-
-    if ([propertyName isEqualToString: @"fmd"]) return YES;
-    return NO;
-    
++(BOOL)propertyIsOptional:(NSString*)propertyName
+{
+    return YES;
 }
 
 @end

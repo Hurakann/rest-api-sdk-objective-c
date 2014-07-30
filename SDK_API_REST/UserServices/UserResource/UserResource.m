@@ -11,38 +11,32 @@
 
 @implementation UserResource
 
-+(NSDictionary *) completeParametersNameToRequest:(User *) user{
-
++(NSDictionary *) completeParametersWithParameters:(NSDictionary *) params AndClass:(Class) clase{
     
-    NSDictionary *propInClass=[[NSDictionary alloc] initWithDictionary:[user toDictionary]];
-    NSArray *keysInObject=[propInClass allKeys];
-    NSArray *properties = [self allPropertyNames];
+    NSArray *keysInObject=[params allKeys];
+    NSArray *properties = [self allPropertyNamesOfClass:[clase class]];
     
     NSMutableDictionary *mutDic=[[NSMutableDictionary alloc] init];
-    
+
     for(int x=0; x<keysInObject.count; x++){
         
         if(!([properties containsObject:[keysInObject objectAtIndex:x]])){
-            [mutDic setObject:[propInClass objectForKey:[keysInObject objectAtIndex:x]] forKey:[NSString stringWithFormat:@"_%@",[keysInObject objectAtIndex:x]]];
+            [mutDic setObject:[params objectForKey:[keysInObject objectAtIndex:x]] forKey:[NSString stringWithFormat:@"_%@",[keysInObject objectAtIndex:x]]];
         }else
-            [mutDic setObject:[propInClass objectForKey:[keysInObject objectAtIndex:x]] forKey:[keysInObject objectAtIndex:x]];
+            [mutDic setObject:[params objectForKey:[keysInObject objectAtIndex:x]] forKey:[keysInObject objectAtIndex:x]];
         
     }
     
-    NSLog(@"mutDIc %@",mutDic);
     return mutDic;
-    
 }
 
-+ (NSArray *)allPropertyNames
-{
++ (NSArray *)allPropertyNamesOfClass:(Class) className{
     
     unsigned count;
-    objc_property_t *properties = class_copyPropertyList([User class], &count);
-    
+    objc_property_t *properties=class_copyPropertyList([className class], &count);;
     NSMutableArray *rv = [NSMutableArray array];
-    
     unsigned i;
+    
     for (i = 0; i < count; i++)
     {
         objc_property_t property = properties[i];
@@ -57,10 +51,11 @@
 
 + (void) createUser:(void (^)(Response *))block withParameters:(User *) userParameters;{
     
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self completeParametersNameToRequest:userParameters] options:kNilOptions error:&error];
-    
     NSString *uri=@"/v1/user";
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self completeParametersWithParameters:[userParameters toDictionary] AndClass:[User class]] options:kNilOptions error:&error];
+
+    NSLog(@"JSON String %@",[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
     
     [ClientPOST postRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         
@@ -107,12 +102,10 @@
 +(void)updateUserInformation:(void (^)(Response *))block withParameters:(UserUpdateParameters *)parameters{
     
     NSString *uri=@"/v1/user";
-    NSString *requestBodyString=[parameters toJSONString];
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self completeParametersWithParameters:[parameters toDictionary] AndClass:[UserUpdateParameters class]] options:kNilOptions error:&error];
     
-    NSLog(@"JSON String %@",requestBodyString);
-    
-    NSData *requestBodyJSON = [requestBodyString dataUsingEncoding:NSUTF8StringEncoding];
-    
+    NSLog(@"JSON String %@",[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
     
     [ClientPUT putRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
@@ -123,8 +116,8 @@
             res.statusCode=statusCode;
             block(res);
         }
-        
-    } body:requestBodyJSON andURI:uri];
+    } body:jsonData andURI:uri];
 
+    
 }
 @end

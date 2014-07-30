@@ -15,10 +15,10 @@
 @interface UserCreateParametersResponse : JSONModel
 
 /** user id of the registered user */
-@property (nonatomic, strong) NSString <Optional> *user_id;
+@property (nonatomic, strong) NSString  *user_id;
 /** if services tag is sent, then return i_services_resolved otherwise i_services_unresolved */
-@property (nonatomic, strong) NSString <Optional> *i_services;
+@property (nonatomic, strong) NSString  *i_services;
 /** if nfc tag is sent, then return i_nfc_resolved otherwise i_nfc_unresolved */
-@property (nonatomic, strong) NSString <Optional> *i_nfc;
+@property (nonatomic, strong) NSString  *i_nfc;
 
 @end

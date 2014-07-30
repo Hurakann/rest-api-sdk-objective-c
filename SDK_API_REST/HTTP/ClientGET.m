@@ -37,6 +37,7 @@
     
     SharedData *instance=[SharedData instance];
     NSURL *url;
+    
     NSString *basicParams=[[self buildURLWithParameters:urlQueryStringParameters] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
     if(uri!=nil)

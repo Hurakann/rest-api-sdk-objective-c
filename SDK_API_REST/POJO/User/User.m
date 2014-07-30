@@ -12,5 +12,9 @@
 
 @implementation User
 
++(BOOL)propertyIsOptional:(NSString*)propertyName
+{
+    return YES;
+}
 
 @end

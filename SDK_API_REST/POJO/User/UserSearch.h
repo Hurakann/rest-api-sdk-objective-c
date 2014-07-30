@@ -20,9 +20,9 @@
 
 
 /** The parent branch_id of the user */
-@property (nonatomic, strong) NSString <Optional> *branch_id;
+@property (nonatomic, strong) NSString *branch_id;
 /** The parent branch_id of the user */
-@property (nonatomic, strong) NSString <Optional> *broot;
+@property (nonatomic, strong) NSString *broot;
 /** The number of elements per page to slide data */
 @property (nonatomic) int pagination;
 /** The number of page to fecth */

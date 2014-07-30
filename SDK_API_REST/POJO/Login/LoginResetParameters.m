@@ -12,9 +12,6 @@
 
 @implementation LoginResetParameters
 
-+(JSONKeyMapper*)keyMapper
-{
-    return [JSONKeyMapper mapperFromUnderscoreCaseToCamelCase];
-}
+
 
 @end

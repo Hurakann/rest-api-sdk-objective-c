@@ -17,16 +17,6 @@
     
     NSMutableDictionary *mutDict=[NSMutableDictionary alloc];
     
-    if([userServiceParameters.user_id isEqualToString:@"all"] && userServiceParameters.owner==nil){
-        [mutDict setObject:userServiceParameters.user_id forKey:@"user_id"];
-    }else if (userServiceParameters.owner!=nil){
-        [mutDict setObject:userServiceParameters.user_id forKey:@"user_id"];
-        [mutDict setObject:userServiceParameters.owner forKey:@"owner"];
-    }else{
-        [mutDict setObject:userServiceParameters.user_id forKey:@"user_id"];
-        [mutDict setObject:userServiceParameters.owner forKey:@"service_id"];
-    }
-    
     NSString *uri=@"/v1/user/services";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
@@ -76,15 +66,6 @@
 
     NSMutableDictionary *mutDict=[NSMutableDictionary alloc];
     
-    if([userServiceParameters.user_id isEqualToString:@"all"] && userServiceParameters.owner==nil){
-        [mutDict setObject:userServiceParameters.user_id forKey:@"user_id"];
-    }else if (userServiceParameters.owner!=nil){
-        [mutDict setObject:userServiceParameters.user_id forKey:@"user_id"];
-        [mutDict setObject:userServiceParameters.owner forKey:@"owner"];
-    }else{
-        [mutDict setObject:userServiceParameters.user_id forKey:@"user_id"];
-        [mutDict setObject:userServiceParameters.owner forKey:@"service_id"];
-    }
     
     NSString *uri=@"/v1/user/services";
     
@@ -92,7 +73,7 @@
         
         if(error==nil){
             NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithData:responseBody];
-            NSDictionary *jsonDecode=[[NSDictionary alloc] initWithObjectsAndKeys:array,@"Services", nil];
+            NSDictionary *jsonDecode=[[NSDictionary alloc] initWithObjectsAndKeys:array,@"services_list", nil];
             Response *resp=[[Response alloc] init];
             resp.statusCode=statusCode;
             resp.responseBody=responseBody;

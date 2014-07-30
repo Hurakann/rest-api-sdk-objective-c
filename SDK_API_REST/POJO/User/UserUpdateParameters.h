@@ -18,9 +18,9 @@
 @interface UserUpdateParameters : JSONModel
 
 /** Branch id for the parent user (owner of the user) */
-@property (nonatomic, strong) NSString <Optional> *branch_id;
+@property (nonatomic, strong) NSString *branch_id;
 /** User id of the parent user */
-@property (nonatomic, strong) NSString <Optional> *user_id;
+@property (nonatomic, strong) NSString *user_id;
 
 
 @end

@@ -20,7 +20,7 @@
 /** Activation date of the service (format YYYY-MM-DD) */
 @property (nonatomic, strong) NSString <Optional> *activation_date;
 /** Status for the service (true or false) */
-@property (nonatomic, strong) NSString <Optional> *status;
+@property (nonatomic) BOOL *status;
 /** Expiration date of the service (format YYYY-MM-DD) */
 @property (nonatomic, strong) NSString <Optional> *expiration_date;
 /** Validity for the service (yearly, monthly, so on ...) */

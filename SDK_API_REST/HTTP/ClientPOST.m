@@ -31,8 +31,9 @@
         return ;
     }
     
-    NSString *jsonDecode=[[NSString alloc] initWithData:bodyParameters encoding:NSUTF8StringEncoding];
+    NSString *jsonDecode=[[NSString alloc] initWithData:[self checVoidParametersWithData:bodyParameters] encoding:NSUTF8StringEncoding];
     
+    NSLog(@"Body JSON: %@",jsonDecode);
     
     NSTimeInterval timeOut=[instance.timeOutInterval doubleValue];
     
@@ -45,9 +46,6 @@
     [req setHTTPMethod:@"POST"];
     [req setHTTPBody:bodyParameters];
 	
-    NSLog(@"Headers: %@", [req allHTTPHeaderFields]);
-    
-    
     NSOperationQueue *queue=[[NSOperationQueue alloc] init];
     [NSURLConnection sendAsynchronousRequest:req queue:queue completionHandler: ^(NSURLResponse *response, NSData *data, NSError *connectionError){
         if(connectionError){
@@ -62,6 +60,23 @@
             
         }
     }];
+    
+}
+
++(NSData *)checVoidParametersWithData:(NSData *) data{
+    
+    NSError *error;
+    NSDictionary *jsonDecode=[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    NSMutableDictionary *jsonWithoutVoidParameters=[[NSMutableDictionary alloc] init];
+    NSArray *keys=[jsonDecode allKeys];
+    
+    for(int x=0;x<jsonDecode.count;x++)
+        if(!([[[jsonDecode objectForKey:[keys objectAtIndex:x]] description] isEqualToString:@"0"] || [[[jsonDecode objectForKey:[keys objectAtIndex:x]] description] isEqualToString:@""]))
+            [jsonWithoutVoidParameters setObject:[jsonDecode objectForKey:[keys objectAtIndex:x]] forKey:[keys objectAtIndex:x]];
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonWithoutVoidParameters options:kNilOptions error:&error];
+    
+    return jsonData;
     
 }
 

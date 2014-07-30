@@ -30,9 +30,10 @@
         return ;
     }
 
-     NSString *jsonDecode=[[NSString alloc] initWithData:bodyParameters encoding:NSUTF8StringEncoding];
+    NSString *jsonDecode=[[NSString alloc] initWithData:[self checVoidParametersWithData:bodyParameters] encoding:NSUTF8StringEncoding];
     
-    NSLog(@"JSON req: %@",jsonDecode);
+    NSLog(@"Body JSON: %@",jsonDecode);
+    
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
     
      NSTimeInterval timeOut=[instance.timeOutInterval doubleValue];
@@ -56,7 +57,24 @@
                  block(data,nil,responseCode.statusCode);
          }
      }];
-    
+
 }
 
++(NSData *)checVoidParametersWithData:(NSData *) data{
+
+    NSError *error;
+    NSDictionary *jsonDecode=[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    NSMutableDictionary *jsonWithoutVoidParameters=[[NSMutableDictionary alloc] init];
+    NSArray *keys=[jsonDecode allKeys];
+    
+    for(int x=0;x<jsonDecode.count;x++){
+    
+        if(!([[[jsonDecode objectForKey:[keys objectAtIndex:x]] description] isEqualToString:@"0"] || [[[jsonDecode objectForKey:[keys objectAtIndex:x]] description] isEqualToString:@""]))
+            [jsonWithoutVoidParameters setObject:[jsonDecode objectForKey:[keys objectAtIndex:x]] forKey:[keys objectAtIndex:x]];
+    }
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonWithoutVoidParameters options:kNilOptions error:&error];
+    
+    return jsonData;
+    
+}
 @end
