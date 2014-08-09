@@ -16,7 +16,7 @@
 + (void) userIsColor:(void (^)(Response *))block withEmail:(NSString *) email AndColor:(NSString *)color{
 
     NSDictionary *dicParams=[[NSDictionary alloc] initWithObjectsAndKeys:email,@"email",color,@"color", nil];
-    NSString *uri=@"/v1/user/is_color";
+    NSString *uri=@"user/is_color";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     

@@ -51,8 +51,16 @@
 
 + (void) createUser:(void (^)(Response *))block withParameters:(User *) userParameters;{
     
-    NSString *uri=@"/v1/user";
+    NSString *uri=@"user";
     NSError *error;
+    SharedData *instance=[SharedData instance];
+    
+    if(userParameters.branch_id==nil)
+        userParameters.branch_id=instance.branch_id;
+    
+    if(userParameters.user_id==nil)
+        userParameters.user_id=instance.user_id;
+    
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self completeParametersWithParameters:[userParameters toDictionary] AndClass:[User class]] options:kNilOptions error:&error];
 
     NSLog(@"JSON String %@",[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
@@ -78,8 +86,9 @@
 
 +(void)getUser:(void (^)(Response *))block withUserGetParameters:(UserGetParameters *)parameters{
 
-    NSString *uri=@"/v1/user";
-
+    NSString *uri=@"user";
+    //SharedData *instance=[SharedData instance];
+    
     NSLog(@"JSON String %@",[parameters toJSONString]);
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
@@ -101,8 +110,9 @@
 
 +(void)updateUserInformation:(void (^)(Response *))block withParameters:(UserUpdateParameters *)parameters{
     
-    NSString *uri=@"/v1/user";
+    NSString *uri=@"user";
     NSError *error;
+    //SharedData *instance=[SharedData instance];
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self completeParametersWithParameters:[parameters toDictionary] AndClass:[UserUpdateParameters class]] options:kNilOptions error:&error];
     
     NSLog(@"JSON String %@",[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);

@@ -102,6 +102,12 @@
 		FC43A47E196E007E00E16FC7 /* UserGetParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43A47C196E007E00E16FC7 /* UserGetParameters.m */; };
 		FC43A482196E059400E16FC7 /* PhaseEditedParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43A481196E059400E16FC7 /* PhaseEditedParameters.m */; };
 		FC43A483196E059400E16FC7 /* PhaseEditedParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FC43A481196E059400E16FC7 /* PhaseEditedParameters.m */; };
+		FC484FA81989ABAA006445AD /* RetailResource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC484FA71989ABAA006445AD /* RetailResource.m */; };
+		FC484FA91989ABAA006445AD /* RetailResource.m in Sources */ = {isa = PBXBuildFile; fileRef = FC484FA71989ABAA006445AD /* RetailResource.m */; };
+		FC484FAD1989AEC1006445AD /* RetailParametersResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FC484FAC1989AEC1006445AD /* RetailParametersResponse.m */; };
+		FC484FAE1989AEC1006445AD /* RetailParametersResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FC484FAC1989AEC1006445AD /* RetailParametersResponse.m */; };
+		FC484FB11989B0D8006445AD /* RetailParametersResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC484FAB1989AEC1006445AD /* RetailParametersResponse.h */; };
+		FC484FB21989B0D8006445AD /* RetailResource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FC484FA61989ABAA006445AD /* RetailResource.h */; };
 		FC55A6471964ADC500E25CE6 /* LoginChangePasswordParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FC55A6421964ADC500E25CE6 /* LoginChangePasswordParameters.m */; };
 		FC55A6481964ADC500E25CE6 /* LoginChangePasswordParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FC55A6421964ADC500E25CE6 /* LoginChangePasswordParameters.m */; };
 		FC55A6491964ADC500E25CE6 /* LoginResetParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FC55A6441964ADC500E25CE6 /* LoginResetParameters.m */; };
@@ -213,6 +219,8 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				FC484FB11989B0D8006445AD /* RetailParametersResponse.h in CopyFiles */,
+				FC484FB21989B0D8006445AD /* RetailResource.h in CopyFiles */,
 				FC6656B9197EF36500FE4C1B /* JSONModel+CoreData.h in CopyFiles */,
 				FC6656BA197EF36500FE4C1B /* JSONModel.h in CopyFiles */,
 				FC6656BB197EF36500FE4C1B /* JSONModelArray.h in CopyFiles */,
@@ -379,6 +387,10 @@
 		FC43A47C196E007E00E16FC7 /* UserGetParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserGetParameters.m; path = POJO/User/UserGetParameters.m; sourceTree = "<group>"; };
 		FC43A480196E059400E16FC7 /* PhaseEditedParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhaseEditedParameters.h; sourceTree = "<group>"; };
 		FC43A481196E059400E16FC7 /* PhaseEditedParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhaseEditedParameters.m; sourceTree = "<group>"; };
+		FC484FA61989ABAA006445AD /* RetailResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetailResource.h; sourceTree = "<group>"; };
+		FC484FA71989ABAA006445AD /* RetailResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetailResource.m; sourceTree = "<group>"; };
+		FC484FAB1989AEC1006445AD /* RetailParametersResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetailParametersResponse.h; sourceTree = "<group>"; };
+		FC484FAC1989AEC1006445AD /* RetailParametersResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetailParametersResponse.m; sourceTree = "<group>"; };
 		FC55A6411964ADC500E25CE6 /* LoginChangePasswordParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginChangePasswordParameters.h; path = POJO/Login/LoginChangePasswordParameters.h; sourceTree = "<group>"; };
 		FC55A6421964ADC500E25CE6 /* LoginChangePasswordParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginChangePasswordParameters.m; path = POJO/Login/LoginChangePasswordParameters.m; sourceTree = "<group>"; };
 		FC55A6431964ADC500E25CE6 /* LoginResetParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginResetParameters.h; path = POJO/Login/LoginResetParameters.h; sourceTree = "<group>"; };
@@ -444,6 +456,7 @@
 		FC12AB0D1961CE320043A1C2 /* USER_SERVICES */ = {
 			isa = PBXGroup;
 			children = (
+				FC484FA51989AB9A006445AD /* Retail */,
 				FCBCC65819708B5700E52145 /* MobileRegister */,
 				FC43A472196DF0FF00E16FC7 /* MobileSend */,
 				FC43A468196DE90000E16FC7 /* Profile */,
@@ -766,6 +779,26 @@
 			path = POJO/Phase;
 			sourceTree = "<group>";
 		};
+		FC484FA51989AB9A006445AD /* Retail */ = {
+			isa = PBXGroup;
+			children = (
+				FC484FA61989ABAA006445AD /* RetailResource.h */,
+				FC484FA71989ABAA006445AD /* RetailResource.m */,
+			);
+			name = Retail;
+			path = UserServices/Retail;
+			sourceTree = "<group>";
+		};
+		FC484FAA1989AE7E006445AD /* Retail */ = {
+			isa = PBXGroup;
+			children = (
+				FC484FAB1989AEC1006445AD /* RetailParametersResponse.h */,
+				FC484FAC1989AEC1006445AD /* RetailParametersResponse.m */,
+			);
+			name = Retail;
+			path = POJO/Retail;
+			sourceTree = "<group>";
+		};
 		FCA5C660195BA239004697BB = {
 			isa = PBXGroup;
 			children = (
@@ -854,6 +887,7 @@
 		FCA5C693195BA24F004697BB /* POJO */ = {
 			isa = PBXGroup;
 			children = (
+				FC484FAA1989AE7E006445AD /* Retail */,
 				FCC344BC196EE138003323DD /* File */,
 				FC43A47F196E058700E16FC7 /* Phase */,
 				FC43A46D196DEE0300E16FC7 /* MobileSend */,
@@ -1107,6 +1141,7 @@
 				FC33D667197EEB4700AF402E /* MobileSend.m in Sources */,
 				FC12AB6F1961FA460043A1C2 /* UserResourceSearch.m in Sources */,
 				FC33D673197EED2E00AF402E /* HoverBox.m in Sources */,
+				FC484FA81989ABAA006445AD /* RetailResource.m in Sources */,
 				FCCF7D4919676EDA00D933E9 /* UserTagsResource.m in Sources */,
 				FC2A6ADA1966171E00B0AD28 /* Parent.m in Sources */,
 				FC33D67C197EEE9800AF402E /* NFC.m in Sources */,
@@ -1158,6 +1193,7 @@
 				FC12AB361961F8870043A1C2 /* JSONKeyMapper.m in Sources */,
 				FC33D67F197EEECD00AF402E /* PhoneExtension.m in Sources */,
 				FCBCC6491970438400E52145 /* LoginResources.m in Sources */,
+				FC484FAD1989AEC1006445AD /* RetailParametersResponse.m in Sources */,
 				FC12AB5D1961F9C70043A1C2 /* ClientPOST.m in Sources */,
 				FC33D676197EEDC400AF402E /* Notification.m in Sources */,
 				FCCF7D4419676CB600D933E9 /* UserColorResource.m in Sources */,
@@ -1184,11 +1220,13 @@
 				FC43A476196DF10C00E16FC7 /* MobileSendResources.m in Sources */,
 				FC3EF772196B40E9006F136A /* AvailabilityResources.m in Sources */,
 				FC12AB371961F8870043A1C2 /* JSONKeyMapper.m in Sources */,
+				FC484FAE1989AEC1006445AD /* RetailParametersResponse.m in Sources */,
 				FC12AB601961F9C70043A1C2 /* ClientPUT.m in Sources */,
 				FC3EF75D196AF57F006F136A /* FingerprintResources.m in Sources */,
 				FC43A462196DDF6E00E16FC7 /* GroupsResources.m in Sources */,
 				FCCF7D541967795900D933E9 /* NFCResources.m in Sources */,
 				FC12AB2D1961F8870043A1C2 /* JSONModel.m in Sources */,
+				FC484FA91989ABAA006445AD /* RetailResource.m in Sources */,
 				FC12AB5E1961F9C70043A1C2 /* ClientPOST.m in Sources */,
 				FC12AB621961F9C70043A1C2 /* Response.m in Sources */,
 				FC43A46C196DE90F00E16FC7 /* ProfileResources.m in Sources */,

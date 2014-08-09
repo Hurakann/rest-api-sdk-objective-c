@@ -27,19 +27,24 @@ static SharedData *_instance;
         
         if(confParams != nil){
             
-            if([confParams objectForKey:@"proxyURL"] != nil && [confParams objectForKey:@"port"]!=nil){
-                _instance.proxyURL=[NSURL URLWithString:[NSString stringWithFormat:@"%@:%@",[confParams objectForKey:@"proxyURL"], [confParams objectForKey:@"port"]]];
+            if([confParams objectForKey:@"endpoint"] != nil && [confParams objectForKey:@"port"]!=nil)
+                _instance.proxyURL=[NSURL URLWithString:[NSString stringWithFormat:@"%@:%@/%@/",[confParams objectForKey:@"endpoint"], [confParams objectForKey:@"port"],[confParams objectForKey:@"api-version"]]];
                 
-                if([confParams objectForKey:@"proxyURL"] != nil)
-                    _instance.socketURL=[NSURL URLWithString:[NSString stringWithFormat:@"%@:%@",[confParams objectForKey:@"webSocketURL"], [confParams objectForKey:@"port"]]];
+            if([confParams objectForKey:@"connection-timeout"] != nil)
+                 _instance.timeOutInterval=[[confParams objectForKey:@"connection-timeout"] intValue];
                 
-            if([confParams objectForKey:@"timeOutInterval"] != nil)
-                 _instance.timeOutInterval=[confParams objectForKey:@"timeOutInterval"];
-                
-            if([confParams objectForKey:@"fileTimeOutInterval"] != nil)
-                _instance.filetimeOutInterval=[confParams objectForKey:@"fileTimeOutInterval"];
+            if([confParams objectForKey:@"connection-readtimeout"] != nil)
+                _instance.filetimeOutInterval=[[confParams objectForKey:@"connection-readtimeout"] intValue];
       
-            }
+            if([confParams objectForKey:@"branch_id"] != nil)
+                _instance.branch_id=[confParams objectForKey:@"branch_id"];
+
+            if([confParams objectForKey:@"user_id"] != nil)
+                _instance.user_id=[confParams objectForKey:@"user_id"];
+
+            if([confParams objectForKey:@"api-version"] != nil)
+                _instance.user_id=[confParams objectForKey:@"api-version"];
+            
         }
     }
     
@@ -49,9 +54,7 @@ static SharedData *_instance;
 - (void)resetModel
 {
     _instance.proxyURL=nil;
-    _instance.socketURL=nil;
-    _instance.timeOutInterval=nil;
-    _instance.filetimeOutInterval=nil;
+    
 }
 
 @end

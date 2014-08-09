@@ -1,14 +1,17 @@
 //
 //  NotificationsResources.h
-//  SDK_API_REST
 //
-//  Created by Eder Gomez Nocelo on 07/07/14.
-//  Copyright (c) 2014 Hova Networks. All rights reserved.
+//  @version 1.0
+//  @author Eder Gomez Nocelo, edegom.nocelo@gmail.com
 //
+
+// Copyright (c) 2013-2014 Hova Networks S.A.P.I. de C.V.
+// Redistribution and use in any form, with or without modification,
+// is strictly prohibited.
 
 #import <Foundation/Foundation.h>
 #import "Response.h"
-#import "NotificationsParameters.h"
+#import "Notification.h"
 #import "ClientPOST.h"
 #import "ClientPUT.h"
 #import "ClientGET.h"
@@ -22,7 +25,7 @@
  * \return a response instance with the http status code and the body decoded as NSDictionary
  *   is returned on given completion handler.
  */
-+ (void) createNewNotification:(void (^)(Response *))block WithParameters:(NotificationsParameters *) params;
++ (void) createNewNotification:(void (^)(Response *))block WithParameters:(Notification *) params;
 
 
 /*!The update in the notification is to change the status from true to false and vice versa. The required data are:

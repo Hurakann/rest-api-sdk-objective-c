@@ -17,7 +17,7 @@
     
     NSMutableDictionary *mutDict=[NSMutableDictionary alloc];
     
-    NSString *uri=@"/v1/user/services";
+    NSString *uri=@"user/services";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
@@ -45,7 +45,7 @@
 
 +(void)updateUserService:(void (^)(Response *))block withParameters:(UserService *)userServiceParameters{
 
-    NSString *uri=@"/v1/user/services";
+    NSString *uri=@"user/services";
     NSString *requestBodyString=[userServiceParameters toJSONString];
     NSData *requestBodyJSON = [requestBodyString dataUsingEncoding:NSUTF8StringEncoding];
     
@@ -67,7 +67,7 @@
     NSMutableDictionary *mutDict=[NSMutableDictionary alloc];
     
     
-    NSString *uri=@"/v1/user/services";
+    NSString *uri=@"user/services";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         

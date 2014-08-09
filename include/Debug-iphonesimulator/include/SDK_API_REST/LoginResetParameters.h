@@ -12,7 +12,7 @@
 #import "JSONModel.h"
 
 /**
- * POJO class for reset datas to login based on API responses.
+ * POJO class for Login reset parameters information json structure based on HOVER API request.
  */
 @interface LoginResetParameters : JSONModel
 
@@ -21,6 +21,6 @@
 /** security code */
 @property (nonatomic, strong) NSString <Optional> *code;
 /** new password to user account */
-@property (nonatomic, strong) NSString <Optional> *nPassword;
+@property (nonatomic, strong, getter = nPassword) NSString <Optional> *new_password;
 
 @end

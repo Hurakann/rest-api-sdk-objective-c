@@ -17,7 +17,7 @@
 
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[parameters toDictionary] options:kNilOptions error:&error];
-    NSString *uri=@"/v1/mobile/register";
+    NSString *uri=@"mobile/register";
     
     [ClientPOST postRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
@@ -37,7 +37,7 @@
     NSDictionary *params=[[NSDictionary alloc] initWithObjectsAndKeys:user_id,@"user_id",token,@"token",status,@"status", nil];
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params options:kNilOptions error:&error];
-    NSString *uri=@"/v1/mobile/register";
+    NSString *uri=@"mobile/register";
     
     [ClientPUT putRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     

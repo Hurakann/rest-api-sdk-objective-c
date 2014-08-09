@@ -18,7 +18,7 @@
     NSDictionary *params=[[NSDictionary alloc] initWithObjectsAndKeys:branch_id,@"branch_id",name,@"name", nil];
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params options:kNilOptions error:&error];
-    NSString *uri=@"/v1/groups";
+    NSString *uri=@"groups";
     
     [ClientPOST postRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         
@@ -37,7 +37,7 @@
 
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[parameters toDictionary] options:kNilOptions error:&error];
-    NSString *uri=@"/v1/groups";
+    NSString *uri=@"groups";
     
     [ClientPUT putRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
@@ -56,7 +56,7 @@
     
     
     NSDictionary *params=[[NSDictionary alloc] initWithObjectsAndKeys:branch_id,@"branch_id", nil];
-    NSString *uri=@"/v1/groups";
+    NSString *uri=@"groups";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         

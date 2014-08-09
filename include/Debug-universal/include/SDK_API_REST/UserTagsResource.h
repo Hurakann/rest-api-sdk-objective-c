@@ -1,10 +1,13 @@
 //
 //  UserTagsResource.h
-//  SDK_API_REST
 //
-//  Created by Eder Gomez Nocelo on 04/07/14.
-//  Copyright (c) 2014 Hova Networks. All rights reserved.
+//  @version 1.0
+//  @author Eder Gomez Nocelo, edegom.nocelo@gmail.com
 //
+
+// Copyright (c) 2013-2014 Hova Networks S.A.P.I. de C.V.
+// Redistribution and use in any form, with or without modification,
+// is strictly prohibited.
 
 #import <Foundation/Foundation.h>
 #import "Response.h"
@@ -22,7 +25,7 @@
  * \return a response instance with the http status code,
  *   is returned on given completion handler.
  */
-+ (void) postUserTags:(void (^)(Response *))block withUserID:(NSString *) userId AndTags:(NSArray *)tags;
++ (void) addTagsToUser:(void (^)(Response *))block WithUserID:(NSString *) userId AndTags:(NSArray *)tags;
 
 
 /*!All data are required, the tags is an array of strings, and you could customize as you want.
@@ -33,7 +36,7 @@
  * \return a response instance with the http status code,
  *   is returned on given completion handler.
  */
-+ (void) putUserTags:(void (^)(Response *))block withUserID:(NSString *) userId AndTags:(NSArray *)tags;
++ (void) updateTagsToUser:(void (^)(Response *))block WithUserID:(NSString *) userId AndTags:(NSArray *)tags;
 
 
 /*!Get specific features of the user

@@ -51,7 +51,7 @@
     NSLog(@"URL %@",url);
     
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
-    NSTimeInterval timeOut=[instance.timeOutInterval doubleValue];
+    NSTimeInterval timeOut=(double) instance.timeOutInterval;
     [req setHTTPMethod:@"GET"];
     [req setTimeoutInterval:timeOut];
     [req setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];

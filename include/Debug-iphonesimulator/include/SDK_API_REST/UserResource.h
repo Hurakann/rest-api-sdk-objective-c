@@ -14,8 +14,8 @@
 #import "ClientPOST.h"
 #import "ClientGET.h"
 #import "ClientPUT.h"
-#import "UserGetInformationParameters.h"
-#import "UserRefreshInformation.h"
+#import "UserGetParameters.h"
+#import "UserUpdateParameters.h"
 #import <objc/runtime.h>
 
 /**
@@ -42,7 +42,7 @@
  * \return a response instance with the http status code and the body decoded as json and in a class translation,
  *   is returned on given completion handler.
  */
-+ (void) getUser:(void (^)(Response *))block withUserGetParameters:(UserGetInformationParameters *)parameters;
++ (void) getUser:(void (^)(Response *))block withUserGetParameters:(UserGetParameters *)parameters;
 
 
 /*!Update user information and related data
@@ -52,5 +52,5 @@
  * \return a response instance with the http status code and the body decoded as json and in a class translation,
  *   is returned on given completion handler.
  */
-+ (void) updateUserInformation:(void (^)(Response *))block withParameters:(UserRefreshInformation *)parameters;
++ (void) updateUserInformation:(void (^)(Response *))block withParameters:(UserUpdateParameters *)parameters;
 @end

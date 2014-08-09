@@ -20,9 +20,9 @@
 /** name of the parent user */
 @property (nonatomic, strong) NSString <Optional> *name;
 /** id of the parent user */
-@property (nonatomic, strong) NSString <Optional> *user_d;
+@property (nonatomic, strong) NSString <Optional> *user_id;
 /** branch id of the parent user */
-@property (nonatomic, strong) NSString <Optional> *branch_d;
+@property (nonatomic, strong) NSString <Optional> *branch_id;
 /** color user, this case blue. */
 @property (nonatomic, strong) NSString <Optional> *coloruser;
 

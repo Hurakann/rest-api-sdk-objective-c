@@ -12,10 +12,14 @@
 
 @interface SharedData : NSObject
 
+@property (nonatomic, retain) NSString *branch_id;
+@property (nonatomic, retain) NSString *user_id;
+@property (nonatomic, retain) NSString *api_version;
+@property (nonatomic, retain) NSString *port;
 @property (nonatomic, retain) NSURL *proxyURL;
-@property (nonatomic, retain) NSURL *socketURL;
-@property (assign) NSNumber *timeOutInterval;
-@property (assign) NSNumber *filetimeOutInterval;
+
+@property (nonatomic, assign) int timeOutInterval;
+@property (nonatomic, assign) int filetimeOutInterval;
 
 + (SharedData *)instance;
 - (void)resetModel;

@@ -22,7 +22,7 @@
  * \return a response instance with the http status code
  *   is returned on given completion handler.
  */
-+ (void) userAvailability:(void (^)(Response *))block WithIdenty:(NSString *) identy;
++ (void) userAvailability:(void (^)(Response *))block WithIdentity:(NSString *) identy;
 
 
 @end

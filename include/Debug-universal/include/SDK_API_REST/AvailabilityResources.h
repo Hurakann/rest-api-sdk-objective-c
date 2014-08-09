@@ -1,10 +1,13 @@
 //
 //  AvailabilityResources.h
-//  SDK_API_REST
 //
-//  Created by Eder Gomez Nocelo on 07/07/14.
-//  Copyright (c) 2014 Hova Networks. All rights reserved.
+//  @version 1.0
+//  @author Eder Gomez Nocelo, edegom.nocelo@gmail.com
 //
+
+// Copyright (c) 2013-2014 Hova Networks S.A.P.I. de C.V.
+// Redistribution and use in any form, with or without modification,
+// is strictly prohibited.
 
 #import <Foundation/Foundation.h>
 #import "Response.h"
@@ -19,7 +22,7 @@
  * \return a response instance with the http status code
  *   is returned on given completion handler.
  */
-+ (void) userAvailability:(void (^)(Response *))block WithIdenty:(NSString *) identy;
++ (void) userAvailability:(void (^)(Response *))block WithIdentity:(NSString *) identy;
 
 
 @end

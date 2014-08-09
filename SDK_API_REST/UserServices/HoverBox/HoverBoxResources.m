@@ -17,7 +17,7 @@
 
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[parameters toDictionary] options:kNilOptions error:&error];
-    NSString *uri=@"/v1/user/hoverbox";
+    NSString *uri=@"user/hoverbox";
     
     [ClientPOST postRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
@@ -35,7 +35,7 @@
 +(void)getHoverBoxes:(void (^)(Response *))block WithBranchID:(NSString *)branch_id{
 
     NSDictionary *params=[[NSDictionary alloc] initWithObjectsAndKeys:branch_id,@"branch_id",nil];
-    NSString *uri=@"/v1/user/hoverboxes";
+    NSString *uri=@"user/hoverboxes";
 
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
@@ -53,7 +53,7 @@
 + (void) getNetworkConfiguration:(void (^)(Response *))block WithHoverBox:(NSString *) hover AndLink:(NSString *)link{
 
     NSDictionary *params=[[NSDictionary alloc] initWithObjectsAndKeys:hover,@"hoverbox",link,@"link", nil];
-    NSString *uri=@"/v1/user/hoverboxnet";
+    NSString *uri=@"user/hoverboxnet";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         
@@ -71,7 +71,7 @@
 +(void)getStaticsOf:(void (^)(Response *))block HoverBox:(NSString *)hover{
 
     NSDictionary *params=[[NSDictionary alloc] initWithObjectsAndKeys:hover,@"hoverbox", nil];
-    NSString *uri=@"/v1/user/hoverboxestats";
+    NSString *uri=@"user/hoverboxestats";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         

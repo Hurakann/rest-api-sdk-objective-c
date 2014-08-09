@@ -10,8 +10,9 @@
 
 #import <Foundation/Foundation.h>
 #import "Response.h"
-#import "UserInformationSearch.h"
+#import "UserSearch.h"
 #import "ClientGET.h"
+#import "SharedData.h"
 
 /**
  * The class is responsible for getting data of the user in the Hover system
@@ -21,13 +22,11 @@
 
 
 /*!Find all users matching the incoming data set
- *
- * \param UserInformationSearch object. Contains basics datas to find a user
- *
- * \return a response instance with the http status code and the body decoded as json and in a class translation,
- *          is returned on given completion handler.
+   \param UserInformationSearch object. Contains basics datas to find a user
+   \return a response instance with the http status code and the body decoded as json and in a class translation,
+        is returned on given completion handler.
  */
-+ (void) searchUser:(void (^)(Response *))block WithParameters:(UserInformationSearch *) searchParameters;
++ (void) searchUser:(void (^)(Response *))block WithParameters:(UserSearch *) searchParameters;
 
 /*!Search a user by nfc card, the response is the same as user search resource, but the total results is always 1.
  *

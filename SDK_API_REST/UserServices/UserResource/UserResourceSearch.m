@@ -14,17 +14,17 @@
 
 +(void)searchUser:(void (^)(Response *))block WithParameters:(UserSearch *)searchParameters{
 
-    NSString *uri=@"/v1/user/search";
+    NSString *uri=@"user/search";
+    //SharedData *instance=[SharedData instance];
     NSMutableDictionary *paramsSend=[[NSMutableDictionary alloc] init];
     paramsSend=[[searchParameters toDictionary] mutableCopy];
+    //NSArray *keys=[paramsSend allKeys];
     
     if([[paramsSend objectForKey:@"pagination"] intValue] == 0)
         [paramsSend removeObjectForKey:@"pagination"];
     
     if([[paramsSend objectForKey:@"page"] intValue] == 0)
         [paramsSend removeObjectForKey:@"page"];
-    
-    NSLog(@"PARAMS %@",paramsSend);
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
@@ -48,7 +48,7 @@
 +(void)searchUser:(void (^)(Response *))block ByNFC:(NSString *)nfc_id{
 
     NSDictionary *params =[[NSDictionary alloc] initWithObjectsAndKeys:nfc_id,@"nfc_id", nil];
-    NSString *uri=@"/v1/search/nfc";
+    NSString *uri=@"search/nfc";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         

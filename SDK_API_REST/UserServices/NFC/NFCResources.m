@@ -17,7 +17,7 @@
 
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[parameters toDictionary] options:kNilOptions error:&error];
-    NSString *uri=@"/v1/user/nfc_card";
+    NSString *uri=@"user/nfc_card";
     
     [ClientPOST postRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
@@ -36,7 +36,7 @@
 
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[parameters toDictionary] options:kNilOptions error:&error];
-    NSString *uri=@"/v1/user/nfc_card";
+    NSString *uri=@"user/nfc_card";
 
     [ClientPUT putRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
@@ -54,7 +54,7 @@
 +(void)getNFCtoUser:(void (^)(Response *))block withUserID:(NSString *)userId{
 
     NSDictionary *param=[[NSDictionary alloc] initWithObjectsAndKeys:userId,@"user_id", nil];
-    NSString *uri=@"/v1/user/nfc_card";
+    NSString *uri=@"user/nfc_card";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     

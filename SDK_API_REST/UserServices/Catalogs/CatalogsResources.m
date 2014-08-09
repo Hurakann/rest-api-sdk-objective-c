@@ -15,7 +15,7 @@
 
 +(void)getCountryList:(void (^)(Response *))block{
 
-    NSString *uri=@"/v1/geo/country";
+    NSString *uri=@"geo/country";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
@@ -36,7 +36,7 @@
 
 +(void)getEstatesList:(void (^)(Response *))block ByCountryID:(NSString *)country_id{
 
-    NSString *uri=@"/v1/geo/estate";
+    NSString *uri=@"geo/estate";
     NSDictionary *parameters=[[NSDictionary alloc] initWithObjectsAndKeys:country_id,@"country_id", nil];
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
@@ -59,7 +59,7 @@
 + (void) getTownsList:(void (^)(Response *))block ByEstateID:(NSString *)estate_id TypeSite:(NSString *) type{
 
 
-    NSString *uri=@"/v1/geo/town";
+    NSString *uri=@"geo/town";
     NSDictionary *parameters=[[NSDictionary alloc] initWithObjectsAndKeys:estate_id,@"estate_id",type,@"type_site", nil];
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){

@@ -15,7 +15,7 @@
 
 + (void) mergeUsers:(void (^)(Response *))block withParameters:(Merge *) userParameters{
 
-    NSString *uri=@"/v1/user/merge";
+    NSString *uri=@"user/merge";
     NSString *requestBodyString=[userParameters toJSONString];
     NSData *requestBodyJSON = [requestBodyString dataUsingEncoding:NSUTF8StringEncoding];
     
@@ -34,7 +34,7 @@
 
 + (void) changeMainUser:(void (^)(Response *))block OfMergedUsers:(Merge *) userParameters{
 
-    NSString *uri=@"/v1/user/merge";
+    NSString *uri=@"user/merge";
     NSString *requestBodyString=[userParameters toJSONString];
     NSData *requestBodyJSON = [requestBodyString dataUsingEncoding:NSUTF8StringEncoding];
     
@@ -54,7 +54,7 @@
 + (void) getMergeUsersInformation:(void (^)(Response *))block withUserID:(NSString *) user_id{
 
     NSDictionary *params=[[NSDictionary alloc] initWithObjectsAndKeys:user_id,@"user_id", nil];
-    NSString *uri=@"/v1/user/merge";
+    NSString *uri=@"user/merge";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     

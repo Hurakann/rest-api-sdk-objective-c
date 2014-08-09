@@ -16,7 +16,7 @@
 +(void)getProfilesList:(void (^)(Response *))block WithUserID:(NSString *)user_id{
 
     NSDictionary *params=[[NSDictionary alloc] initWithObjectsAndKeys:user_id,@"user_id", nil];
-    NSString *uri=@"/v1/profiles";
+    NSString *uri=@"profiles";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         
@@ -40,7 +40,7 @@
 
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[info toDictionary] options:kNilOptions error:&error];
-    NSString *uri=@"/v1/profiles";
+    NSString *uri=@"profiles";
    
     NSLog(@"LOG %@",[info toJSONString]);
     
@@ -71,7 +71,7 @@
     NSDictionary *profileParams=[[NSDictionary alloc] initWithObjectsAndKeys:profile_id,@"profile_id",name,@"name", nil];
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:profileParams options:kNilOptions error:&error];
-    NSString *uri=@"/v1/profiles";
+    NSString *uri=@"profiles";
 
     [ClientPUT putRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     

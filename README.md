@@ -77,9 +77,12 @@ Installation
 2. Drag **Configuration.plist** to your project. In this file you must provide the basic datas to SDK:
 	
 	* **endPoint**: server IP.
+  * **port: port to recieve petitions
 	* **timeOut**: range time to make petition.
 	* **fileTimeOut**: when connection is sucessful, range time to read response.
  	* **apiVersion**: __The HOVER__ API version.
+  * **user_id: identifier of parent user
+  * **branch_id: branch identifier of parent user
 
 And finally you'll have installed SDK for hover API !
 

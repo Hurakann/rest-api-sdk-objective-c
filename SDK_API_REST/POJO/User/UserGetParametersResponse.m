@@ -15,7 +15,8 @@
 
 +(BOOL)propertyIsOptional:(NSString*)propertyName
 {
-    return YES;
+    if ([propertyName isEqualToString: @"fmd"]) return YES;
+    return NO;
 }
 
 @end

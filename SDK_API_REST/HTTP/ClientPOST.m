@@ -12,19 +12,13 @@
 
 @implementation ClientPOST
 
-+(NSURL *)getProxyURL{
-    
-    SharedData *instance=[SharedData instance];
-    return instance.proxyURL;
-}
-
 + (void)postRequestWithBODYParameters:(void (^)(NSData *responseBody, NSError *error, NSInteger statusCode))block body:(NSData *)bodyParameters andURI:(NSString *)uri{
     
-    NSURL *url;
     SharedData *instance=[SharedData instance];
+    NSURL *url;
     
     if(bodyParameters!=nil && uri!=nil)
-        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",[self getProxyURL],uri]];
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",instance.proxyURL,uri]];
     else{
         if (block)
             block(nil,nil,0);
@@ -35,8 +29,7 @@
     
     NSLog(@"Body JSON: %@",jsonDecode);
     
-    NSTimeInterval timeOut=[instance.timeOutInterval doubleValue];
-    
+    NSTimeInterval timeOut=(double) instance.timeOutInterval;
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
     [req setTimeoutInterval:timeOut];
     [req setCachePolicy:kNilOptions];

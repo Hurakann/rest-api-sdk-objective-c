@@ -16,7 +16,7 @@
 +(void)matchFingerprint:(void (^)(Response *))block FMDRight:(NSString *)right FMDLeft:(NSString *)left{
 
     NSDictionary *dicParameters=[[NSDictionary alloc] initWithObjectsAndKeys:right,@"fmd_rigth",left,@"fmd_left", nil];
-    NSString *uri=@"/v1/match/fingerprint";
+    NSString *uri=@"match/fingerprint";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
@@ -34,7 +34,7 @@
 +(void)verifyFingerprint:(void (^)(Response *))block withUserID:(NSString *)userID andID:(NSString *)identifier{
 
     NSDictionary *dicParameters=[[NSDictionary alloc] initWithObjectsAndKeys:userID,@"user_id",identifier,@"id", nil];
-    NSString *uri=@"/v1/match/fingerprint";
+    NSString *uri=@"match/fingerprint";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         

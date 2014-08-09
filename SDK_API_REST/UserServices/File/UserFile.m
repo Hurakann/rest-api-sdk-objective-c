@@ -22,7 +22,7 @@
 
 +(void)uploadFile:(void (^)(Response *))block WithData:(NSData *)data andName:(NSString *)name ofType:(NSString *)type{
 
-    NSString *uri=@"/v1/user/file";
+    NSString *uri=@"user/file";
     SharedData *instance=[SharedData instance];
     NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=E19zNvXGzXaLvS5C"];
     
@@ -30,8 +30,8 @@
     [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     [request setHTTPShouldHandleCookies:NO];
     
-     NSTimeInterval timeOut=[instance.filetimeOutInterval doubleValue];
-    [request setTimeoutInterval:timeOut];
+     //NSTimeInterval timeOut=[instance.filetimeOutInterval doubleValue];
+    //[request setTimeoutInterval:timeOut];
     [request setHTTPMethod:@"POST"];
     [request setValue:contentType forHTTPHeaderField: @"Content-Type"];
     
@@ -84,7 +84,7 @@
     NSDictionary *params=[[NSDictionary alloc] initWithObjectsAndKeys:idFile,@"file_id", nil];
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params options:kNilOptions error:&error];
-    NSString *uri=@"/v1/user/file";
+    NSString *uri=@"user/file";
     
     [ClientDELETE deleteRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         

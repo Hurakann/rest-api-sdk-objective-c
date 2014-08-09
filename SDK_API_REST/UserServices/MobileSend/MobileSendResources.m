@@ -17,7 +17,7 @@
 
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[parameters toDictionary] options:kNilOptions error:&error];
-    NSString *uri=@"/v1/mobile/send";
+    NSString *uri=@"mobile/send";
 
     [ClientPOST postRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     

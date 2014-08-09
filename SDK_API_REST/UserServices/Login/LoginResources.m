@@ -15,7 +15,7 @@
 
 + (void)getLogin:(void (^)(Response *))block withParameters:(Login *)parameters{
     
-    NSString *URI=@"/v1/user/login";
+    NSString *URI=@"user/login";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         
@@ -42,7 +42,7 @@
 + (void)loginRestore:(void (^)(Response *))block withUserEmail:(NSString *) email{
     
     NSDictionary *params=[[NSDictionary alloc] initWithObjectsAndKeys:email,@"email", nil];
-    NSString *uri=@"/v1/user/login/restore";
+    NSString *uri=@"user/login/restore";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         
@@ -66,7 +66,7 @@
     }
     
     NSData *requestBodyJSON = [requestBodyString dataUsingEncoding:NSUTF8StringEncoding];
-    NSString *uri=@"/v1/user/login/change_password";
+    NSString *uri=@"user/login/change_password";
     
     [ClientPOST postRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statuscode){
         
@@ -91,7 +91,7 @@
     }
     
     NSData *requestBodyJSON = [requestBodyString dataUsingEncoding:NSUTF8StringEncoding];
-    NSString *uri=@"/v1/user/login/reset";
+    NSString *uri=@"user/login/reset";
     
     [ClientPOST postRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statuscode){
         

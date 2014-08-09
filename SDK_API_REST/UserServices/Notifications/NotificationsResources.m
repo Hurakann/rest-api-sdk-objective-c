@@ -17,7 +17,7 @@
 
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[params toDictionary] options:kNilOptions error:&error];
-    NSString *uri=@"/v1/user/notifications";
+    NSString *uri=@"user/notifications";
     
     [ClientPOST postRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
@@ -38,7 +38,7 @@
     NSDictionary *params=[[NSDictionary alloc] initWithObjectsAndKeys:notifyId,@"notification_id",isRead,@"read",nil];
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params options:kNilOptions error:&error];
-    NSString *uri=@"/v1/user/notifications";
+    NSString *uri=@"user/notifications";
     
     [ClientPUT putRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         
@@ -58,7 +58,7 @@
 +(void)getAllNotifications:(void (^)(Response *))block WithBranchID:(NSString *)branch_id{
 
     NSDictionary *params=[[NSDictionary alloc] initWithObjectsAndKeys:branch_id,@"branch_id",nil];
-    NSString *uri=@"/v1/user/notifications";
+    NSString *uri=@"user/notifications";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         
@@ -80,7 +80,7 @@
 +(void)getSpecificNotification:(void (^)(Response *))block WithBranchID:(NSString *)branch_id NotificationID:(NSString *)notifyID{
 
     NSDictionary *params=[[NSDictionary alloc] initWithObjectsAndKeys:branch_id,@"branch_id",notifyID,@"notification_id",nil];
-    NSString *uri=@"/v1/user/notifications";
+    NSString *uri=@"user/notifications";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         

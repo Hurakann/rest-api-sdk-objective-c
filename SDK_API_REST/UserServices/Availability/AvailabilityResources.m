@@ -15,10 +15,10 @@
 @implementation AvailabilityResources
 
 
-+(void)userAvailability:(void (^)(Response *))block WithIdenty:(NSString *)identy{
++(void)userAvailability:(void (^)(Response *))block WithIdentity:(NSString *)identy{
 
     NSDictionary *params=[[NSDictionary alloc] initWithObjectsAndKeys:identy,@"identity",nil];
-    NSString *uri=@"/v1/user/availability";
+    NSString *uri=@"user/availability";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         

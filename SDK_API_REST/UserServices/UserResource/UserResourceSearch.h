@@ -12,6 +12,7 @@
 #import "Response.h"
 #import "UserSearch.h"
 #import "ClientGET.h"
+#import "SharedData.h"
 
 /**
  * The class is responsible for getting data of the user in the Hover system

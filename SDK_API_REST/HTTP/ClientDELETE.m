@@ -23,10 +23,10 @@
     SharedData *instance=[SharedData instance];
     NSString *jsonDecode=[[NSString alloc] initWithData:bodyParameters encoding:NSUTF8StringEncoding];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",[self getProxyURL],uri]];
-    NSTimeInterval timeOut=[instance.timeOutInterval doubleValue];
+   // NSTimeInterval timeOut=[instance.timeOutInterval doubleValue];
     
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
-    [req setTimeoutInterval:timeOut];
+    //[req setTimeoutInterval:timeOut];
     [req setCachePolicy:kNilOptions];
     [req setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [req setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];

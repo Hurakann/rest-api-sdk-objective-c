@@ -16,7 +16,7 @@
 +(void)getUserPhoneExtension:(void (^)(Response *))block withBranchID:(NSString *)branchID{
 
     NSDictionary *dicParameters=[[NSDictionary alloc] initWithObjectsAndKeys:branchID,@"branch_id", nil];
-    NSString *uri=@"/v1/user/phone/extension";
+    NSString *uri=@"user/phone/extension";
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     

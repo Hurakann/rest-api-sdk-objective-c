@@ -1,17 +1,20 @@
 //
 //  GroupsResources.h
-//  SDK_API_REST
 //
-//  Created by Eder Gomez Nocelo on 09/07/14.
-//  Copyright (c) 2014 Hova Networks. All rights reserved.
+//  @version 1.0
+//  @author Eder Gomez Nocelo, edegom.nocelo@gmail.com
 //
+
+// Copyright (c) 2013-2014 Hova Networks S.A.P.I. de C.V.
+// Redistribution and use in any form, with or without modification,
+// is strictly prohibited.
 
 #import <Foundation/Foundation.h>
 #import "Response.h"
 #import "ClientGET.h"
 #import "ClientPOST.h"
 #import "ClientPUT.h"
-#import "GroupParameters.h"
+#import "Group.h"
 
 @interface GroupsResources : NSObject
 
@@ -33,7 +36,7 @@
  * \return a response instance with the http status code
  *   is returned on given completion handler.
  */
-+ (void) updateGroup:(void (^)(Response *))block WithParameters:(GroupParameters *)parameters ;
++ (void) updateGroup:(void (^)(Response *))block WithParameters:(Group *)parameters ;
 
 
 /*! Obtain the groups list of user

@@ -2,15 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>timeOutInterval</key>
-	<integer>50</integer>
-	<key>fileTimeOutInterval</key>
-	<integer>300</integer>
-	<key>proxyURL</key>
-	<string>http://192.168.0.16</string>
-	<key>webSocketURL</key>
-	<string>http://187.185.36.77</string>
+	<key>user_id</key>
+	<string></string>
+	<key>brach_id</key>
+	<string></string>
+	<key>api-version</key>
+	<string></string>
+	<key>connection-timeout</key>
+	<integer></integer>
+	<key>connection-readtimeout</key>
+	<integer></integer>
+	<key></key>
 	<key>port</key>
-	<string>8081</string>
+	<string></string>
 </dict>
 </plist>
