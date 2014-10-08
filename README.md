@@ -77,12 +77,12 @@ Installation
 2. Drag **Configuration.plist** to your project. In this file you must provide the basic datas to SDK:
 	
 	* **endPoint**: server IP.
-  * **port: port to recieve petitions
+  * **port**: port to recieve petitions
 	* **timeOut**: range time to make petition.
 	* **fileTimeOut**: when connection is sucessful, range time to read response.
  	* **apiVersion**: __The HOVER__ API version.
-  * **user_id: identifier of parent user
-  * **branch_id: branch identifier of parent user
+  * **user_id**: identifier of parent user
+  * **branch_id**: branch identifier of parent user
 
 And finally you'll have installed SDK for hover API !
 
@@ -99,30 +99,12 @@ All responses from the RESTful API on the SDK are managed by Response class, thi
 ```objectivec
 User *userInfo = [[User alloc] initWithDictionary:response.bodyResponseT];
 ```
+
 SDK samples
 ===========
-Under test directory exists a bunchet of code snippets that allow testing diferent scenarios and shows you how to use the API with the SDK.
+In **sample directory** you can find a live example project of **THE HOVER API** integration in iOS App.
 
-Registering a user
-------------------
-Shows how to register an user using the default fields and extending of your own user settings
-
-Getting user info
------------------
-Shows how to get information about the registered user
-
-Login
------
-Shows how to login an user using username, password, nfc and/or fingerprint
-
-Assign services to the user
----------------------------
-Shows how to assign services to the user
-
-Get services for the user
--------------------------
-Shows how to get services assigned to the user
-
-Searching an user
------------------
-Shows how to search a user using default fields or customizing settings
+About
+=====
+You can find more info about courses of how to use the API, SDKs or integration of The Hover into your app,
+visiting us at: http://www.thehover.com or mail us: thehover@hovanetworks.com
