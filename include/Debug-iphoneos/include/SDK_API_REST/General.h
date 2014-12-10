@@ -18,8 +18,8 @@
 @interface General : JSONModel
 
 /** id for something  */
-@property (nonatomic, strong) NSString *id;
+@property (nonatomic, strong) NSString <Optional> *id;
 /** Name for somethig */
-@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString <Optional> *name;
 
 @end

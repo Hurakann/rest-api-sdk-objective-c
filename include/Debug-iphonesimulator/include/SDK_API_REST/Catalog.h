@@ -22,9 +22,14 @@
 @property (nonatomic, strong) NSString <Optional> *estate_id;
 /** Identifier for country, when catalog is of countries */
 @property (nonatomic, strong) NSString <Optional> *country_id;
+/** ISO Code for country, when catalog is of countries */
+@property (nonatomic, strong) NSString <Optional> *country_code;
 /** Identifier for town, when catalog is of towns */
 @property (nonatomic, strong) NSString <Optional> *town_id;
 /** Type of site, when catalog is of towns */
 @property (nonatomic, strong) NSString <Optional> *type_site;
-
+/** Identifier to phone number */
+@property (nonatomic, strong) NSString <Optional> *iso_country_code;
+/** Identifier to phone number */
+@property (nonatomic) int num_digits;
 @end

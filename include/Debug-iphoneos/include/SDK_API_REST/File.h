@@ -23,7 +23,8 @@
 @property (nonatomic, strong) NSString <Optional> *file_key;
 /** Type of file (IFE, CURP, RFC)*/
 @property (nonatomic, strong) NSString <Optional> *file_type;
-
+/** URL to get file */
+@property (nonatomic, strong) NSString <Optional> *url_file;
 @end
 
-@protocol FileProtocol;
+@protocol File;

@@ -79,6 +79,12 @@
 @property (nonatomic, strong) NSString <Optional> *broot;
 /** User id of current user */
 @property (nonatomic, strong) NSString <Optional> *user_id;
+/** User id of current user */
+@property (nonatomic, strong) NSArray <File, ConvertOnDemand, Optional>*files;
+/** Latitude for the user */
+@property (nonatomic, strong) NSString <Optional> *latitude;
+/** Longitude for the user */
+@property (nonatomic, strong) NSString <Optional> *longitude;
 @end
 
 @protocol UserGetParametersResponse;

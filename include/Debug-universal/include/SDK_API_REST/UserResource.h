@@ -15,7 +15,6 @@
 #import "ClientGET.h"
 #import "ClientPUT.h"
 #import "UserGetParameters.h"
-#import "UserUpdateParameters.h"
 #import <objc/runtime.h>
 
 /**
@@ -52,5 +51,11 @@
  * \return a response instance with the http status code and the body decoded as json and in a class translation,
  *   is returned on given completion handler.
  */
-+ (void) updateUserInformation:(void (^)(Response *))block withParameters:(UserUpdateParameters *)parameters;
++ (void) updateUserInformation:(void (^)(Response *))block withParameters:(User *)parameters;
+
+
+/*
+ EXCLUSIVE HOVUP
+ */
++ (void) action:(void (^)(Response *))block WithInfo:(NSDictionary *) info;
 @end

@@ -90,7 +90,7 @@
 /** NFC paramters to this user */
 @property (nonatomic, strong) NSArray <NFCProtocol, ConvertOnDemand, Optional> *nfc;
 /** Files information added to this user */
-@property (nonatomic, strong) NSArray <FileProtocol, ConvertOnDemand, Optional> *files;
+@property (nonatomic, strong) NSArray <File, ConvertOnDemand, Optional> *files;
 /** FMD datas to this user */
 @property (nonatomic, strong) NSArray <Optional> *fmd;
 /** Phase to keep the user (1, 2, 3 or 4) */

@@ -12,7 +12,7 @@
 
 @interface RetailResource : NSObject
 
-/*!Get retails fro beacon
+/*!Get retails for beacon
  *
  * \param NSStrign estimote: user_id for estimote
  * \param NSStrign status: status
@@ -22,4 +22,13 @@
  */
 + (void) getRetails:(void (^)(Response *))block ForEstimote:(NSString *)estimote withStatus:(NSString *)status;
 
+
+/*!Get renderize HTML of retail
+ *
+ * \param NSStrign retail_ad_id: identifier to retail
+ *
+ * \return a response instance with the http status code
+ *   is returned on given completion handler.
+ */
++ (void) getRenderizeHTML:(void (^)(Response *))block ofRetailAdID:(NSString *) retail_ad_id;
 @end

@@ -12,6 +12,7 @@
 #import <Foundation/Foundation.h>
 #import "Response.h"
 #import "ClientDELETE.h"
+#import "ClientGET.h"
 #import <UIKit/UIKit.h>
 #import "SharedData.h"
 
@@ -38,5 +39,15 @@
  *   is returned on given completion handler.
  */
 + (void) deleteFile:(void (^)(Response *))block WithFileID:(NSString *) idFile;
+
+
+/*!Get file
+ *
+ * \param NSString file_id: photo id of user
+ *
+ * \return a response instance with the http status code
+ *   is returned on given completion handler.
+ */
++ (void) getFile:(void (^)(Response *))block WithFileID:(NSString *) idFile;
 
 @end
