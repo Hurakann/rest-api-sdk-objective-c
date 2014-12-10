@@ -12,12 +12,6 @@
 
 @implementation ClientGET
 
-+(NSURL *)getProxyURL{
-    
-    SharedData *instance=[SharedData instance];
-    return instance.proxyURL;
-}
-
 + (NSString *)buildURLWithParameters:(NSDictionary *) parameters{
     
     NSString *basicUrl=@"";
@@ -25,12 +19,18 @@
     
     for(int x=0;x<parameters.count;x++){
         if(x==0){
-            basicUrl=[NSString stringWithFormat:@"?%@=%@",[keys objectAtIndex:x],[parameters objectForKey:[keys objectAtIndex:x]]];
+            basicUrl=[NSString stringWithFormat:@"?%@=%@",[keys objectAtIndex:x],[self encodeURL:[parameters objectForKey:[keys objectAtIndex:x]]]];
         }else
-            basicUrl=[basicUrl stringByAppendingString:[NSString stringWithFormat:@"&%@=%@",[keys objectAtIndex:x],[parameters objectForKey:[keys objectAtIndex:x]]]];
+            basicUrl=[basicUrl stringByAppendingString:[NSString stringWithFormat:@"&%@=%@",[keys objectAtIndex:x],[self encodeURL:[parameters objectForKey:[keys objectAtIndex:x]]]]];
     }
     
     return basicUrl;
+}
+
++(NSString *)encodeURL:(NSString *)urlString
+{
+    CFStringRef newString = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)urlString, NULL, CFSTR("!|*'();:&=+$,/?%#[]"), kCFStringEncodingUTF8);
+    return (NSString *)CFBridgingRelease(newString);
 }
 
 + (void)getRequestWithURLParameters:(void (^)(NSData *responseBody, NSError *error, NSInteger statusCode))block parametersURL:(NSDictionary *)urlQueryStringParameters andURI:(NSString *)uri{
@@ -38,23 +38,32 @@
     SharedData *instance=[SharedData instance];
     NSURL *url;
     
-    NSString *basicParams=[[self buildURLWithParameters:urlQueryStringParameters] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    NSString *basicParams=[self buildURLWithParameters:urlQueryStringParameters];
     
     if(uri!=nil)
-        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@",[self getProxyURL],uri,basicParams]];
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@",instance.proxyURL,uri,basicParams]];
     else{
         if (block)
             block(nil,nil,0);
         return ;
     }
     
-    NSLog(@"URL %@",url);
+    /////    MUTABLE REQUEST    ////
     
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
     NSTimeInterval timeOut=(double) instance.timeOutInterval;
     [req setHTTPMethod:@"GET"];
     [req setTimeoutInterval:timeOut];
     [req setCachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData];
+    [req setValue:[NSString stringWithFormat:@"rest-api-sdk-objective-c-version-%@",instance.sdk_version] forHTTPHeaderField:@"User-Agent"];
+    [req setValue:[NSString stringWithFormat:@"%@",instance.c_key] forHTTPHeaderField:@"Ckey"];
+    [req setValue:@"text/plain; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [req setValue:@"es-ES,es;q=0.8,en;q=0.6" forHTTPHeaderField:@"Accept-Language"];
+    
+    if(instance.logs){
+        NSLog(@"HEADERS %@",[req allHTTPHeaderFields]);
+        NSLog(@"URL %@",url);
+    }
     
     NSOperationQueue *queue=[[NSOperationQueue alloc] init];
     [NSURLConnection sendAsynchronousRequest:req queue:queue completionHandler: ^(NSURLResponse *response, NSData *data, NSError *connectionError){

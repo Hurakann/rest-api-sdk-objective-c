@@ -13,12 +13,6 @@
 
 @implementation UserFile
 
-+(NSURL *)getProxyURL{
-    
-    SharedData *instance=[SharedData instance];
-    return instance.proxyURL;
-    
-}
 
 +(void)uploadFile:(void (^)(Response *))block WithData:(NSData *)data andName:(NSString *)name ofType:(NSString *)type{
 
@@ -30,11 +24,12 @@
     [request setCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
     [request setHTTPShouldHandleCookies:NO];
     
-     //NSTimeInterval timeOut=[instance.filetimeOutInterval doubleValue];
-    //[request setTimeoutInterval:timeOut];
+    NSURL *url=[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",instance.proxyURL,uri]];
+    
+    NSTimeInterval timeOut=(double) instance.filetimeOutInterval;
+    [request setTimeoutInterval:timeOut];
     [request setHTTPMethod:@"POST"];
     [request setValue:contentType forHTTPHeaderField: @"Content-Type"];
-    
     NSMutableData *body = [NSMutableData data];
     
     if (data) {
@@ -55,12 +50,19 @@
     [body appendData:[[NSString stringWithFormat:@"--E19zNvXGzXaLvS5C--\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
     
     NSString *postLength = [NSString stringWithFormat:@"%d",(int) [body length]];
-    NSURL *url=[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",[self getProxyURL],uri]];
+    
     [request setHTTPBody:body];
+    [request setValue:[NSString stringWithFormat:@"rest-api-sdk-objective-c-version-%@",instance.sdk_version] forHTTPHeaderField:@"User-Agent"];
+    [request setValue:[NSString stringWithFormat:@"%@",instance.c_key] forHTTPHeaderField:@"Ckey"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setURL:url];
     
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    
+    if(instance.logs){
+        NSLog(@"HEADERS %@",[request allHTTPHeaderFields]);
+        NSLog(@"URL : %@",url);
+    }
     
     [NSURLConnection sendAsynchronousRequest:request queue:queue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
      {
@@ -96,6 +98,25 @@
             block(nil);
         
     } body:jsonData andURI:uri];
+}
+
++(void)getFile:(void (^)(Response *))block WithFileID:(NSString *)idFile{
+
+    NSDictionary *params=[[NSDictionary alloc] initWithObjectsAndKeys:idFile,@"file_id", nil];
+    NSString *uri=@"user/file";
+    
+    [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
+        
+        if(error==nil){
+            Response *resp=[[Response alloc] init];
+            resp.statusCode=statusCode;
+            resp.responseBody=responseBody;
+            block(resp);
+        }else
+            block(nil);
+    
+    } parametersURL:params andURI:uri];
+    
 }
 @end
 

@@ -19,17 +19,22 @@
 }
 
 +(void)deleteRequestWithBODYParameters:(void (^)(NSData *, NSError *, NSInteger))block body:(NSData *)bodyParameters andURI:(NSString *)uri{
-
+    
+    
     SharedData *instance=[SharedData instance];
     NSString *jsonDecode=[[NSString alloc] initWithData:bodyParameters encoding:NSUTF8StringEncoding];
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",[self getProxyURL],uri]];
-   // NSTimeInterval timeOut=[instance.timeOutInterval doubleValue];
+    NSTimeInterval timeOut=(double) instance.timeOutInterval;
+    
+    /////    MUTABLE REQUEST    ////
     
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
-    //[req setTimeoutInterval:timeOut];
+    [req setTimeoutInterval:timeOut];
     [req setCachePolicy:kNilOptions];
     [req setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [req setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [req setValue:[NSString stringWithFormat:@"rest-api-sdk-objective-c-version-%@",instance.sdk_version] forHTTPHeaderField:@"User-Agent"];
+    [req setValue:[NSString stringWithFormat:@"%@",instance.c_key] forHTTPHeaderField:@"Ckey"];
     [req setValue:[NSString stringWithFormat:@"%d",(int) [jsonDecode length]] forHTTPHeaderField:@"Content-Length"];
     [req setHTTPMethod:@"DELETE"];
     [req setHTTPBody:bodyParameters];

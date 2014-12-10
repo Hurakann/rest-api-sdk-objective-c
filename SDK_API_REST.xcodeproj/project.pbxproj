@@ -112,6 +112,7 @@
 		FC55A6481964ADC500E25CE6 /* LoginChangePasswordParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FC55A6421964ADC500E25CE6 /* LoginChangePasswordParameters.m */; };
 		FC55A6491964ADC500E25CE6 /* LoginResetParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FC55A6441964ADC500E25CE6 /* LoginResetParameters.m */; };
 		FC55A64A1964ADC500E25CE6 /* LoginResetParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = FC55A6441964ADC500E25CE6 /* LoginResetParameters.m */; };
+		FC61F7891A38B8F600CB325C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC61F7881A38B8F600CB325C /* CoreFoundation.framework */; };
 		FC6656AF197EF01A00FE4C1B /* Merge.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6656AE197EF01A00FE4C1B /* Merge.m */; };
 		FC6656B2197EF04D00FE4C1B /* MergeParametersResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6656B1197EF04D00FE4C1B /* MergeParametersResponse.m */; };
 		FC6656B5197EF0B800FE4C1B /* UserSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6656B4197EF0B800FE4C1B /* UserSearch.m */; };
@@ -190,6 +191,12 @@
 		FCBCC6491970438400E52145 /* LoginResources.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBCC6481970438400E52145 /* LoginResources.m */; };
 		FCBCC65B19708B6900E52145 /* MobileRegisterResources.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBCC65A19708B6900E52145 /* MobileRegisterResources.m */; };
 		FCBCC65C19708B6900E52145 /* MobileRegisterResources.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBCC65A19708B6900E52145 /* MobileRegisterResources.m */; };
+		FCBFB425199BDA6F00B3C689 /* BranchesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBFB424199BDA6F00B3C689 /* BranchesModel.m */; };
+		FCBFB426199BDAE300B3C689 /* BranchesModel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FCBFB423199BDA6F00B3C689 /* BranchesModel.h */; };
+		FCCB313619EDCF8C00EF3B9C /* ConfirmRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB313519EDCF8C00EF3B9C /* ConfirmRegister.m */; };
+		FCCB313A19EDD04200EF3B9C /* ConfirmRegisterResource.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCB313919EDD04200EF3B9C /* ConfirmRegisterResource.m */; };
+		FCCB313B19EDD37600EF3B9C /* ConfirmRegister.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FCCB313419EDCF8C00EF3B9C /* ConfirmRegister.h */; };
+		FCCB313C19EDD37C00EF3B9C /* ConfirmRegisterResource.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = FCCB313819EDD04200EF3B9C /* ConfirmRegisterResource.h */; };
 		FCCF7D3019675FC900D933E9 /* UserMergeResources.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCF7D2F19675FC900D933E9 /* UserMergeResources.m */; };
 		FCCF7D3119675FC900D933E9 /* UserMergeResources.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCF7D2F19675FC900D933E9 /* UserMergeResources.m */; };
 		FCCF7D3F196767FB00D933E9 /* UserPhoneExtensionResources.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCF7D3E196767FB00D933E9 /* UserPhoneExtensionResources.m */; };
@@ -219,6 +226,9 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				FCCB313C19EDD37C00EF3B9C /* ConfirmRegisterResource.h in CopyFiles */,
+				FCCB313B19EDD37600EF3B9C /* ConfirmRegister.h in CopyFiles */,
+				FCBFB426199BDAE300B3C689 /* BranchesModel.h in CopyFiles */,
 				FC484FB11989B0D8006445AD /* RetailParametersResponse.h in CopyFiles */,
 				FC484FB21989B0D8006445AD /* RetailResource.h in CopyFiles */,
 				FC6656B9197EF36500FE4C1B /* JSONModel+CoreData.h in CopyFiles */,
@@ -395,6 +405,7 @@
 		FC55A6421964ADC500E25CE6 /* LoginChangePasswordParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginChangePasswordParameters.m; path = POJO/Login/LoginChangePasswordParameters.m; sourceTree = "<group>"; };
 		FC55A6431964ADC500E25CE6 /* LoginResetParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginResetParameters.h; path = POJO/Login/LoginResetParameters.h; sourceTree = "<group>"; };
 		FC55A6441964ADC500E25CE6 /* LoginResetParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginResetParameters.m; path = POJO/Login/LoginResetParameters.m; sourceTree = "<group>"; };
+		FC61F7881A38B8F600CB325C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		FC6656AD197EF01A00FE4C1B /* Merge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Merge.h; sourceTree = "<group>"; };
 		FC6656AE197EF01A00FE4C1B /* Merge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Merge.m; sourceTree = "<group>"; };
 		FC6656B0197EF04D00FE4C1B /* MergeParametersResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeParametersResponse.h; sourceTree = "<group>"; };
@@ -418,6 +429,12 @@
 		FCBCC6481970438400E52145 /* LoginResources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginResources.m; path = UserServices/Login/LoginResources.m; sourceTree = "<group>"; };
 		FCBCC65919708B6900E52145 /* MobileRegisterResources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileRegisterResources.h; sourceTree = "<group>"; };
 		FCBCC65A19708B6900E52145 /* MobileRegisterResources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileRegisterResources.m; sourceTree = "<group>"; };
+		FCBFB423199BDA6F00B3C689 /* BranchesModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BranchesModel.h; sourceTree = "<group>"; };
+		FCBFB424199BDA6F00B3C689 /* BranchesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BranchesModel.m; sourceTree = "<group>"; };
+		FCCB313419EDCF8C00EF3B9C /* ConfirmRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmRegister.h; sourceTree = "<group>"; };
+		FCCB313519EDCF8C00EF3B9C /* ConfirmRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmRegister.m; sourceTree = "<group>"; };
+		FCCB313819EDD04200EF3B9C /* ConfirmRegisterResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmRegisterResource.h; sourceTree = "<group>"; };
+		FCCB313919EDD04200EF3B9C /* ConfirmRegisterResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmRegisterResource.m; sourceTree = "<group>"; };
 		FCCF7D2E19675FC900D933E9 /* UserMergeResources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMergeResources.h; sourceTree = "<group>"; };
 		FCCF7D2F19675FC900D933E9 /* UserMergeResources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMergeResources.m; sourceTree = "<group>"; };
 		FCCF7D3D196767FB00D933E9 /* UserPhoneExtensionResources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPhoneExtensionResources.h; sourceTree = "<group>"; };
@@ -435,6 +452,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC61F7891A38B8F600CB325C /* CoreFoundation.framework in Frameworks */,
 				FCA5C66D195BA239004697BB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +474,7 @@
 		FC12AB0D1961CE320043A1C2 /* USER_SERVICES */ = {
 			isa = PBXGroup;
 			children = (
+				FCCB313719EDD02F00EF3B9C /* Confirm */,
 				FC484FA51989AB9A006445AD /* Retail */,
 				FCBCC65819708B5700E52145 /* MobileRegister */,
 				FC43A472196DF0FF00E16FC7 /* MobileSend */,
@@ -570,6 +589,8 @@
 			children = (
 				FC2A6AD3196615D600B0AD28 /* Branches.h */,
 				FC2A6AD4196615D600B0AD28 /* Branches.m */,
+				FCBFB423199BDA6F00B3C689 /* BranchesModel.h */,
+				FCBFB424199BDA6F00B3C689 /* BranchesModel.m */,
 			);
 			name = Branches;
 			path = POJO/Branches;
@@ -821,6 +842,7 @@
 		FCA5C66B195BA239004697BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC61F7881A38B8F600CB325C /* CoreFoundation.framework */,
 				FCA5C66C195BA239004697BB /* Foundation.framework */,
 				FCA5C67A195BA239004697BB /* XCTest.framework */,
 				FCA5C67D195BA239004697BB /* UIKit.framework */,
@@ -887,6 +909,7 @@
 		FCA5C693195BA24F004697BB /* POJO */ = {
 			isa = PBXGroup;
 			children = (
+				FCCB313319EDCF6A00EF3B9C /* Confirm */,
 				FC484FAA1989AE7E006445AD /* Retail */,
 				FCC344BC196EE138003323DD /* File */,
 				FC43A47F196E058700E16FC7 /* Phase */,
@@ -954,6 +977,26 @@
 			);
 			name = File;
 			path = POJO/File;
+			sourceTree = "<group>";
+		};
+		FCCB313319EDCF6A00EF3B9C /* Confirm */ = {
+			isa = PBXGroup;
+			children = (
+				FCCB313419EDCF8C00EF3B9C /* ConfirmRegister.h */,
+				FCCB313519EDCF8C00EF3B9C /* ConfirmRegister.m */,
+			);
+			name = Confirm;
+			path = POJO/Confirm;
+			sourceTree = "<group>";
+		};
+		FCCB313719EDD02F00EF3B9C /* Confirm */ = {
+			isa = PBXGroup;
+			children = (
+				FCCB313819EDD04200EF3B9C /* ConfirmRegisterResource.h */,
+				FCCB313919EDD04200EF3B9C /* ConfirmRegisterResource.m */,
+			);
+			name = Confirm;
+			path = UserServices/Confirm;
 			sourceTree = "<group>";
 		};
 		FCCF7D2D19675FA200D933E9 /* Merge */ = {
@@ -1118,7 +1161,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		FCA5C6D2195BAA27004697BB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -1151,6 +1194,7 @@
 				FC12AB491961F9830043A1C2 /* User.m in Sources */,
 				FC12AB711961FA460043A1C2 /* UserResourceServices.m in Sources */,
 				FC12AB321961F8870043A1C2 /* JSONModelError.m in Sources */,
+				FCCB313619EDCF8C00EF3B9C /* ConfirmRegister.m in Sources */,
 				FC33D657197EB75A00AF402E /* UserCreateParametersResponse.m in Sources */,
 				FC6656B8197EF12300FE4C1B /* UserService.m in Sources */,
 				FC55A6471964ADC500E25CE6 /* LoginChangePasswordParameters.m in Sources */,
@@ -1173,6 +1217,7 @@
 				FC12AB611961F9C70043A1C2 /* Response.m in Sources */,
 				FC3EF761196B08CA006F136A /* UserFile.m in Sources */,
 				FC43A479196DF38E00E16FC7 /* LoginResponseParameters.m in Sources */,
+				FCCB313A19EDD04200EF3B9C /* ConfirmRegisterResource.m in Sources */,
 				FC3EF76B196B2C6C006F136A /* NotificationsResources.m in Sources */,
 				FCCF7D3019675FC900D933E9 /* UserMergeResources.m in Sources */,
 				FC2A6ADF19661B1400B0AD28 /* General.m in Sources */,
@@ -1187,6 +1232,7 @@
 				FC6656AF197EF01A00FE4C1B /* Merge.m in Sources */,
 				FC43A475196DF10C00E16FC7 /* MobileSendResources.m in Sources */,
 				FCBCC65B19708B6900E52145 /* MobileRegisterResources.m in Sources */,
+				FCBFB425199BDA6F00B3C689 /* BranchesModel.m in Sources */,
 				FC43A47D196E007E00E16FC7 /* UserGetParameters.m in Sources */,
 				FC6656B5197EF0B800FE4C1B /* UserSearch.m in Sources */,
 				FCCF7D3F196767FB00D933E9 /* UserPhoneExtensionResources.m in Sources */,
@@ -1280,6 +1326,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1317,6 +1364,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1347,6 +1395,7 @@
 		FCA5C68D195BA239004697BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/SDK_API_REST.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SDK_API_REST/SDK_API_REST-Prefix.pch";
@@ -1359,6 +1408,7 @@
 		FCA5C68E195BA239004697BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/SDK_API_REST.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SDK_API_REST/SDK_API_REST-Prefix.pch";
@@ -1407,6 +1457,7 @@
 		FCA5C6D0195BAA21004697BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1414,6 +1465,7 @@
 		FCA5C6D1195BAA21004697BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

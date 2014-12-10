@@ -14,10 +14,8 @@
 @implementation NotificationParametersResponse
 
 +(BOOL)propertyIsOptional:(NSString *)propertyName{
-    
     if ([propertyName isEqualToString: @"read"]) return YES;
     return NO;
-    
 }
 
 @end

@@ -32,4 +32,23 @@
     } parametersURL:params andURI:uri];
 
 }
+
++(void)getRenderizeHTML:(void (^)(Response *))block ofRetailAdID:(NSString *)retail_ad_id{
+
+    NSDictionary *params=[[NSDictionary alloc] initWithObjectsAndKeys:retail_ad_id,@"retail_ad_id", nil];
+    NSString *uri=@"retail";
+    
+    [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
+        
+        if(error==nil){
+            Response *resp=[[Response alloc] init];
+            resp.statusCode=statusCode;
+            resp.responseBody=responseBody;
+            block(resp);
+        }else
+            block(nil);
+        
+    } parametersURL:params andURI:uri];
+    
+}
 @end

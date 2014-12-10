@@ -27,6 +27,7 @@
             
             NSError *error;
             NSDictionary *jsonDecode=[NSJSONSerialization JSONObjectWithData:responseBody options:kNilOptions error:&error];
+            NSLog(@"KEYS %@",[jsonDecode allKeys]);
             responseBlock=[[Response alloc] init];
             responseBlock.statusCode=statusCode;
             responseBlock.responseBody=responseBody;
@@ -84,13 +85,14 @@
 
 +(void)loginReset:(void (^)(Response *))block withParameters:(LoginResetParameters *)parameters{
     
-    NSString *requestBodyString=[parameters toJSONString];
    
-    if (!([requestBodyString rangeOfString:@"n_password"].location == NSNotFound)) {
+    //NSString *requestBodyString=[parameters toJSONString];
+   
+   /* if (!([requestBodyString rangeOfString:@"n_password"].location == NSNotFound)) {
         [requestBodyString stringByReplacingOccurrencesOfString:@"n_password" withString:@"new_password"];
-    }
+    }*/
     
-    NSData *requestBodyJSON = [requestBodyString dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *requestBodyJSON = [[parameters toJSONString] dataUsingEncoding:NSUTF8StringEncoding];
     NSString *uri=@"user/login/reset";
     
     [ClientPOST postRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statuscode){

@@ -11,5 +11,8 @@
 #import "Catalog.h"
 
 @implementation Catalog
-
++(BOOL)propertyIsOptional:(NSString*)propertyName
+{
+    return YES;
+}
 @end

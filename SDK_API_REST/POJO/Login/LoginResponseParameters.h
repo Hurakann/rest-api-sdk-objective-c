@@ -30,7 +30,7 @@
 /** Language short description for the user (es, en, so on....) */
 @property (nonatomic, strong) NSString <Optional> *language;
 /** Branches for the user */
-@property (nonatomic, strong) NSArray  <Branches, ConvertOnDemand, Optional>* branches;
+@property (nonatomic, strong) NSArray <Branches, ConvertOnDemand, Optional>* branches;
 
 @end
 

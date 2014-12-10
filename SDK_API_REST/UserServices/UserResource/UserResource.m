@@ -63,7 +63,7 @@
     
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self completeParametersWithParameters:[userParameters toDictionary] AndClass:[User class]] options:kNilOptions error:&error];
 
-    NSLog(@"JSON String %@",[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
+    //NSLog(@"JSON String %@",[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
     
     [ClientPOST postRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
         
@@ -89,7 +89,7 @@
     NSString *uri=@"user";
     //SharedData *instance=[SharedData instance];
     
-    NSLog(@"JSON String %@",[parameters toJSONString]);
+    //NSLog(@"JSON String %@",[parameters toJSONString]);
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
@@ -108,14 +108,14 @@
     } parametersURL:[parameters toDictionary] andURI:uri];
 }
 
-+(void)updateUserInformation:(void (^)(Response *))block withParameters:(UserUpdateParameters *)parameters{
++(void)updateUserInformation:(void (^)(Response *))block withParameters:(User *)parameters{
     
     NSString *uri=@"user";
     NSError *error;
-    //SharedData *instance=[SharedData instance];
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self completeParametersWithParameters:[parameters toDictionary] AndClass:[UserUpdateParameters class]] options:kNilOptions error:&error];
+
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self completeParametersWithParameters:[parameters toDictionary] AndClass:[User class]] options:kNilOptions error:&error];
     
-    NSLog(@"JSON String %@",[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
+    //NSLog(@"JSON String %@",[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
     
     [ClientPUT putRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
@@ -128,6 +128,26 @@
         }
     } body:jsonData andURI:uri];
 
+    
+}
+
++ (void) action:(void (^)(Response *))block WithInfo:(NSDictionary *) info{
+
+    NSString *uri=@"user/action";
+    NSError *error;
+    
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:info options:kNilOptions error:&error];
+    
+    [ClientPOST postRequestWithBODYParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
+        
+        if(error)
+            block(nil);
+        else{
+            Response *res=[[Response alloc] init];
+            res.statusCode=statusCode;
+            block(res);
+        }
+    } body:jsonData andURI:uri];
     
 }
 @end

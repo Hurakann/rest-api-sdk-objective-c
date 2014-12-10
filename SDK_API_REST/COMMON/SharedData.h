@@ -17,12 +17,14 @@
 @property (nonatomic, retain) NSString *api_version;
 @property (nonatomic, retain) NSString *port;
 @property (nonatomic, retain) NSURL *proxyURL;
+@property (nonatomic, retain) NSString *c_key;
+@property (nonatomic, retain) NSString *sdk_version;
+@property (nonatomic) BOOL logs;
 
 @property (nonatomic, assign) int timeOutInterval;
 @property (nonatomic, assign) int filetimeOutInterval;
 
 + (SharedData *)instance;
 - (void)resetModel;
-
 
 @end

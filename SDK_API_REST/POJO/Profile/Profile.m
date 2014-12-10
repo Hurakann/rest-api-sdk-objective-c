@@ -13,12 +13,4 @@
 
 @implementation Profile
 
-
-+(BOOL)propertyIsOptional:(NSString *)propertyName{
-    
-    if ([propertyName isEqualToString: @"id"]) return YES;
-    return NO;
-    
-}
-
 @end

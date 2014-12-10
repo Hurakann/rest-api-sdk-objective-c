@@ -25,9 +25,7 @@
         return ;
     }
     
-    NSString *jsonDecode=[[NSString alloc] initWithData:[self checVoidParametersWithData:bodyParameters] encoding:NSUTF8StringEncoding];
-    
-    NSLog(@"Body JSON: %@",jsonDecode);
+    NSString *jsonDecode=[[NSString alloc] initWithData:[self checkVoidParametersWithData:bodyParameters] encoding:NSUTF8StringEncoding];
     
     NSTimeInterval timeOut=(double) instance.timeOutInterval;
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
@@ -35,10 +33,18 @@
     [req setCachePolicy:kNilOptions];
     [req setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [req setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [req setValue:[NSString stringWithFormat:@"rest-api-sdk-objective-c-version-%@",instance.sdk_version] forHTTPHeaderField:@"User-Agent"];
+    [req setValue:[NSString stringWithFormat:@"%@",instance.c_key] forHTTPHeaderField:@"Ckey"];
     [req setValue:[NSString stringWithFormat:@"%d",(int) [jsonDecode length]] forHTTPHeaderField:@"Content-Length"];
     [req setHTTPMethod:@"POST"];
     [req setHTTPBody:bodyParameters];
 	
+    if(instance.logs){
+        NSLog(@"HEADERS %@",[req allHTTPHeaderFields]);
+        NSLog(@"Body JSON: %@",jsonDecode);
+        NSLog(@"URL: %@",url);
+    }
+    
     NSOperationQueue *queue=[[NSOperationQueue alloc] init];
     [NSURLConnection sendAsynchronousRequest:req queue:queue completionHandler: ^(NSURLResponse *response, NSData *data, NSError *connectionError){
         if(connectionError){
@@ -56,7 +62,7 @@
     
 }
 
-+(NSData *)checVoidParametersWithData:(NSData *) data{
++(NSData *)checkVoidParametersWithData:(NSData *) data{
     
     NSError *error;
     NSDictionary *jsonDecode=[NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];

@@ -27,8 +27,15 @@ static SharedData *_instance;
         
         if(confParams != nil){
             
-            if([confParams objectForKey:@"endpoint"] != nil && [confParams objectForKey:@"port"]!=nil)
-                _instance.proxyURL=[NSURL URLWithString:[NSString stringWithFormat:@"%@:%@/%@/",[confParams objectForKey:@"endpoint"], [confParams objectForKey:@"port"],[confParams objectForKey:@"api-version"]]];
+            _instance.logs=NO;
+            
+            if(![[confParams objectForKey:@"endpoint"] isEqualToString:@""]){
+                if([[confParams objectForKey:@"port"] isEqualToString:@""])
+                    _instance.proxyURL=[NSURL URLWithString:[NSString stringWithFormat:@"%@/%@/",[confParams objectForKey:@"endpoint"],[confParams objectForKey:@"api-version"]]];
+                else
+                    _instance.proxyURL=[NSURL URLWithString:[NSString stringWithFormat:@"%@:%@/%@/",[confParams objectForKey:@"endpoint"], [confParams objectForKey:@"port"],[confParams objectForKey:@"api-version"]]];
+                
+            }
                 
             if([confParams objectForKey:@"connection-timeout"] != nil)
                  _instance.timeOutInterval=[[confParams objectForKey:@"connection-timeout"] intValue];
@@ -44,6 +51,14 @@ static SharedData *_instance;
 
             if([confParams objectForKey:@"api-version"] != nil)
                 _instance.user_id=[confParams objectForKey:@"api-version"];
+            
+            if([confParams objectForKey:@"Ckey"] != nil)
+                _instance.c_key=[confParams objectForKey:@"Ckey"];
+            
+            if([[confParams objectForKey:@"logs"] isEqualToString:@"YES"])
+                _instance.logs=YES;
+            
+            _instance.sdk_version=[[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"];
             
         }
     }

@@ -11,9 +11,9 @@
 
 @interface RetailParametersResponse : JSONModel
 
-@property (nonatomic,strong) NSString <Optional> *ad;
+@property (nonatomic,strong) NSString <Optional> *title;
 @property (nonatomic,strong) NSString <Optional> *retail_ad_id;
+@property (nonatomic,strong) NSString <Optional> *ad;
 
 @end
 
-@protocol RetailParametersResponse;

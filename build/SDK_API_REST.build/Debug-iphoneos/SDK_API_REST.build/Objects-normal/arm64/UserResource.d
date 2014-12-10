@@ -20,5 +20,4 @@ dependencies: \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/HTTP/ClientGET.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/HTTP/ClientPUT.h \
   /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/User/UserGetParameters.h \
-  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/Phase/PhaseEditedParameters.h \
-  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/User/UserUpdateParameters.h
+  /Users/Eder/Documents/ProyectosHOVA/SDK_API_REST/SDK_API_REST/POJO/Phase/PhaseEditedParameters.h
