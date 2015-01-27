@@ -19,9 +19,16 @@
     
     for(int x=0;x<parameters.count;x++){
         if(x==0){
-            basicUrl=[NSString stringWithFormat:@"?%@=%@",[keys objectAtIndex:x],[self encodeURL:[parameters objectForKey:[keys objectAtIndex:x]]]];
-        }else
-            basicUrl=[basicUrl stringByAppendingString:[NSString stringWithFormat:@"&%@=%@",[keys objectAtIndex:x],[self encodeURL:[parameters objectForKey:[keys objectAtIndex:x]]]]];
+            if([[parameters objectForKey:[keys objectAtIndex:x]] isKindOfClass:[NSString class]])
+                basicUrl=[NSString stringWithFormat:@"?%@=%@",[keys objectAtIndex:x],[self encodeURL:[parameters objectForKey:[keys objectAtIndex:x]]]];
+            else
+                basicUrl=[NSString stringWithFormat:@"?%@=%@",[keys objectAtIndex:x],[parameters objectForKey:[keys objectAtIndex:x]]];
+        }else{
+            if([[parameters objectForKey:[keys objectAtIndex:x]] isKindOfClass:[NSString class]])
+                basicUrl=[basicUrl stringByAppendingString:[NSString stringWithFormat:@"&%@=%@",[keys objectAtIndex:x],[self encodeURL:[parameters objectForKey:[keys objectAtIndex:x]]]]];
+            else
+                basicUrl=[basicUrl stringByAppendingString:[NSString stringWithFormat:@"&%@=%@",[keys objectAtIndex:x],[parameters objectForKey:[keys objectAtIndex:x]]]];
+        }
     }
     
     return basicUrl;

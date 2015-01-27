@@ -19,6 +19,9 @@
  */
 @interface UserSearchParametersResponse : JSONModel
 
+
+/** Number of total results */
+@property (nonatomic) NSArray *matches;
 /** Number of total results */
 @property (nonatomic) int total_results;
 /** Number of pages to result */

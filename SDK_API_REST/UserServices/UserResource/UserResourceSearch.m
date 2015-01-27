@@ -28,6 +28,22 @@
     
     [ClientGET getRequestWithURLParameters:^(NSData *responseBody, NSError *error, NSInteger statusCode){
     
+        Response *res=[[Response alloc] init];
+        res.statusCode=statusCode;
+        
+        if(responseBody!=nil){
+            NSError *error;
+            NSDictionary *jsonDecode=[NSJSONSerialization JSONObjectWithData:responseBody options:kNilOptions error:&error];
+            res.responseBody=responseBody;
+            res.responseBodyT=jsonDecode;
+        }else{
+            res.responseBody=nil;
+            res.responseBodyT=nil;
+        }
+        
+        block(res);
+        
+        /*
         Response *res;
         if(error)
             block(res);
@@ -39,7 +55,7 @@
             res.responseBody=responseBody;
             res.responseBodyT=jsonDecode;
             block(res);
-        }
+        }*/
         
     } parametersURL:paramsSend andURI:uri];
 

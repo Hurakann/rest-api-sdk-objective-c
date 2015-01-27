@@ -85,6 +85,8 @@
 @property (nonatomic, strong) NSString <Optional> *latitude;
 /** Longitude for the user */
 @property (nonatomic, strong) NSString <Optional> *longitude;
+/** Longitude for the user */
+@property (nonatomic, strong) NSString <Optional> *email;
 @end
 
 @protocol UserGetParametersResponse;
