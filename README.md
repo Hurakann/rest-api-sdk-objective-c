@@ -78,7 +78,7 @@ Installation
 	
   * **Ckey**: private key to API access.
 	* **endPoint**: server IP.
-  * **port**: port to recieve petitions
+  * **port**: port to recieve petitions.
 	* **timeOut**: range time to make petition.
 	* **fileTimeOut**: when connection is sucessful, range time to read response.
  	* **apiVersion**: __The HOVER__ API version.
