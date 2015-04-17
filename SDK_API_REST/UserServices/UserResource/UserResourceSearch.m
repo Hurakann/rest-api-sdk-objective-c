@@ -43,20 +43,6 @@
         
         block(res);
         
-        /*
-        Response *res;
-        if(error)
-            block(res);
-        else{
-            NSError *error;
-            NSDictionary *jsonDecode=[NSJSONSerialization JSONObjectWithData:responseBody options:kNilOptions error:&error];
-            res=[[Response alloc] init];
-            res.statusCode=statusCode;
-            res.responseBody=responseBody;
-            res.responseBodyT=jsonDecode;
-            block(res);
-        }*/
-        
     } parametersURL:paramsSend andURI:uri];
 
 }

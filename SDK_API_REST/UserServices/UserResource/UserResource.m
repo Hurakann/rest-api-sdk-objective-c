@@ -87,7 +87,6 @@
 +(void)getUser:(void (^)(Response *))block withUserGetParameters:(UserGetParameters *)parameters{
 
     NSString *uri=@"user";
-    //SharedData *instance=[SharedData instance];
     
     //NSLog(@"JSON String %@",[parameters toJSONString]);
     
@@ -132,7 +131,7 @@
 }
 
 + (void) action:(void (^)(Response *))block WithInfo:(NSDictionary *) info{
-
+    
     NSString *uri=@"user/action";
     NSError *error;
     
@@ -150,4 +149,5 @@
     } body:jsonData andURI:uri];
     
 }
+
 @end

@@ -54,8 +54,12 @@
 + (void) updateUserInformation:(void (^)(Response *))block withParameters:(User *)parameters;
 
 
-/*
- EXCLUSIVE HOVUP
+/*!User action
+ *
+ * \info NSDictionary object. Contains parameters to make action to specific user
+ *
+ * \return a response instance with the http status code and the body decoded as json and in a class translation,
+ *   is returned on given completion handler.
  */
 + (void) action:(void (^)(Response *))block WithInfo:(NSDictionary *) info;
 @end

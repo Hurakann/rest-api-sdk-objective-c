@@ -53,9 +53,4 @@
  */
 + (void) updateUserInformation:(void (^)(Response *))block withParameters:(User *)parameters;
 
-
-/*
- EXCLUSIVE HOVUP
- */
-+ (void) action:(void (^)(Response *))block WithInfo:(NSDictionary *) info;
 @end

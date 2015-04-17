@@ -31,6 +31,8 @@
         }
     }
     
+    keys=nil;
+    
     return basicUrl;
 }
 
@@ -74,7 +76,6 @@
     
     NSOperationQueue *queue=[[NSOperationQueue alloc] init];
     [NSURLConnection sendAsynchronousRequest:req queue:queue completionHandler: ^(NSURLResponse *response, NSData *data, NSError *connectionError){
-        
         if(connectionError!=nil){
             if (block)
                 block(nil,connectionError,0);

@@ -41,8 +41,7 @@
     [req setHTTPBody:bodyParameters];
     
     if(instance.logs){
-        NSLog(@"HEADERS %@",[req allHTTPHeaderFields]);
-        NSLog(@"Body JSON: %@",jsonDecode);
+        NSLog(@"Body JSON %@",jsonDecode);
         NSLog(@"URL %@",url);
     }
     
@@ -77,5 +76,52 @@
     
     return jsonData;
     
+}
+
++(void)putRequestWithBODYParameters:(void (^)(NSData *, NSError *, NSInteger))block body:(NSData *)bodyParameters ToServer:(NSString *)server andURI:(NSString *)uri{
+
+    NSURL *url;
+    SharedData *instance=[SharedData instance];
+    
+    if(bodyParameters!=nil && uri!=nil)
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",server,uri]];
+    else{
+        if (block)
+            block(nil,nil,0);
+        return ;
+    }
+    
+    NSString *jsonDecode=[[NSString alloc] initWithData:[self checVoidParametersWithData:bodyParameters] encoding:NSUTF8StringEncoding];
+    NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
+    NSTimeInterval timeOut=(double) instance.timeOutInterval;
+    
+    [req setTimeoutInterval:timeOut];
+    [req setCachePolicy:kNilOptions];
+    [req setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [req setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [req setValue:[NSString stringWithFormat:@"rest-api-sdk-objective-c-version-%@",instance.sdk_version] forHTTPHeaderField:@"User-Agent"];
+    [req setValue:[NSString stringWithFormat:@"%@",instance.c_key] forHTTPHeaderField:@"Ckey"];
+    [req setValue:[NSString stringWithFormat:@"%d",(int) [jsonDecode length]] forHTTPHeaderField:@"Content-Length"];
+    [req setHTTPMethod:@"PUT"];
+    [req setHTTPBody:bodyParameters];
+    
+    if(instance.logs){
+        NSLog(@"Body JSON %@",jsonDecode);
+        NSLog(@"URL %@",url);
+    }
+    
+    NSOperationQueue *queue=[[NSOperationQueue alloc] init];
+    [NSURLConnection sendAsynchronousRequest:req queue:queue completionHandler: ^(NSURLResponse *response, NSData *data, NSError *connectionError){
+        if(connectionError){
+            if (block)
+                block(nil,connectionError,0);
+        }else{
+            NSHTTPURLResponse *responseCode=[[NSHTTPURLResponse alloc] init];
+            responseCode=(NSHTTPURLResponse *)response;
+            if (block)
+                block(data,nil,responseCode.statusCode);
+        }
+    }];
+
 }
 @end

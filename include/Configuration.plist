@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>logs</key>
+	<string>YES</string>
+	<key>Ckey</key>
+	<string></string>
 	<key>user_id</key>
 	<string></string>
 	<key>brach_id</key>
@@ -12,7 +16,8 @@
 	<integer></integer>
 	<key>connection-readtimeout</key>
 	<integer></integer>
-	<key></key>
+	<key>endpoint</key>
+	<string></string>
 	<key>port</key>
 	<string></string>
 </dict>

@@ -11,7 +11,6 @@
 
 
 #import <Foundation/Foundation.h>
-#import "UserGetParametersResponse.h"
 #import "JSONModel.h"
 
 /**
@@ -27,7 +26,7 @@
 /** Number of pages to result */
 @property (nonatomic) int pages;
 /** Users match with yours search params */
-@property (nonatomic, strong) NSArray <UserGetParametersResponse, ConvertOnDemand, Optional> *users;
-
+//@property (nonatomic, strong) NSArray <UserGetParametersResponse, ConvertOnDemand, Optional> *users;
+@property (nonatomic, strong) NSArray *users;
 
 @end

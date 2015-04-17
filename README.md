@@ -39,7 +39,7 @@ Localize headers and **.a** file, it can be two methods:
 * **Method A.** If you'd like use *.a* generated when run static library project.
 
    1. Expand Products in File Browser view
-   2. Select libMyStaticLibrary.a
+   2. Select libSDK_API_REST.a
    3. Right Button > Show in Finder
    4. Move up in directory
    
@@ -76,6 +76,7 @@ Installation
 
 2. Drag **Configuration.plist** to your project. In this file you must provide the basic datas to SDK:
 	
+  * **Ckey**: private key to API access.
 	* **endPoint**: server IP.
   * **port**: port to recieve petitions
 	* **timeOut**: range time to make petition.
@@ -84,12 +85,14 @@ Installation
   * **user_id**: identifier of parent user
   * **branch_id**: branch identifier of parent user
 
-And finally you'll have installed SDK for hover API !
+And finally you'll have installed SDK for hover API and is ready for use!! !
 
 Manage the request
 ==================
 
  All requests to the RESTful API on the SDK are made using a serialized class, so, each request has their own translation from json to class, for example: to register a single user use User class and its attributes instead build a json file.
+
+  >   NOTE: If you want add more attributes to any serialized class, then just extends from the desired class.
 
 Manage the response
 ===================
